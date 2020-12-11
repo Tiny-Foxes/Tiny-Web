@@ -115,16 +115,26 @@
         const logo = document.getElementById('logo')
         const logoTitle = document.getElementById('logoTitle')  
 
-        const reloadText = function (file) {
-            const pageContent = document.getElementById('pageContent')
+        about.onclick = function () {
             pageContent.innerHTML = ""
-            $("#pageContent").load(file);
+            $("#pageContent").load("about.html");
         }
-        about.onclick = reloadText('about.html')
-        projects.onclick = reloadText('projects.html')
-        home.onclick = reloadText('home.html')
-        logo.onclick = reloadText('home.html')
-        logoTitle.onclick = reloadText('home.html')
+        projects.onclick = function () {
+            pageContent.innerHTML = ""
+            $("#pageContent").load("projects.html");
+        }
+        home.onclick = function () {
+            pageContent.innerHTML = ""
+            $("#pageContent").load("home.html");
+        }
+        logo.onclick = function () {
+            pageContent.innerHTML = ""
+            $("#pageContent").load("home.html");
+        }
+        logoTitle.onclick = function () {
+            pageContent.innerHTML = ""
+            $("#pageContent").load("home.html");
+        }
 
         $(window).resize(function() {
             const width = $(window).width
