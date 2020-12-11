@@ -113,8 +113,10 @@
         const projects = document.getElementById('projects')
         const home = document.getElementById('home')
         const logo = document.getElementById('logo')
-        const logoTitle = document.getElementById('logoTitle')  
+        const logoTitle = document.getElementById('logoTitle')
 
+        const pageContent = document.getElementById('pageContent')
+        const xhr = new XMLHttpRequest();
         about.onclick = function () {
             pageContent.innerHTML = ""
             $("#pageContent").load("about.html");
@@ -135,18 +137,8 @@
             pageContent.innerHTML = ""
             $("#pageContent").load("home.html");
         }
-
-        $(window).resize(function() {
-            const width = $(window).width
-
-            if (width >= 600) {
-                $('#bye').addClass('text-center')
-                $('#bye').addClass('img-fluid')
-            }
-        })
-
     </script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </body>
 </html>
