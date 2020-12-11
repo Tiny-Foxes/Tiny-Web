@@ -8,6 +8,7 @@
     <!-- Bootstrap CSS file -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="icon" href="tinyFoxes.png">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -113,32 +114,29 @@
         const projects = document.getElementById('projects')
         const home = document.getElementById('home')
         const logo = document.getElementById('logo')
-        const logoTitle = document.getElementById('logoTitle')
+        const logoTitle = document.getElementById('logoTitle')  
 
-        const pageContent = document.getElementById('pageContent')
-        const xhr = new XMLHttpRequest();
-        about.onclick = function () {
+        const reloadText = function (file) {
+            const pageContent = document.getElementById('pageContent')
             pageContent.innerHTML = ""
-            $("#pageContent").load("about.html");
+            $("#pageContent").load(file);
         }
-        projects.onclick = function () {
-            pageContent.innerHTML = ""
-            $("#pageContent").load("projects.html");
-        }
-        home.onclick = function () {
-            pageContent.innerHTML = ""
-            $("#pageContent").load("home.html");
-        }
-        logo.onclick = function () {
-            pageContent.innerHTML = ""
-            $("#pageContent").load("home.html");
-        }
-        logoTitle.onclick = function () {
-            pageContent.innerHTML = ""
-            $("#pageContent").load("home.html");
-        }
+        about.onclick = reloadText('about.html')
+        projects.onclick = reloadText('projects.html')
+        home.onclick = reloadText('home.html')
+        logo.onclick = reloadText('home.html')
+        logoTitle.onclick = reloadText('home.html')
+
+        $(window).resize(function() {
+            const width = $(window).width
+
+            if (width >= 600) {
+                $('#bye').addClass('text-center')
+                $('#bye').addClass('img-fluid')
+            }
+        })
+
     </script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </body>
 </html>
