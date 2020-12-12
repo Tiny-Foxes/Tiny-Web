@@ -177,6 +177,11 @@
                     console.log('This should be working')
                     $("#bye").removeClass('text-center')
                     $("#bye").removeClass('img-fluid')
+                } else {
+                    if (window.tinyFoxesGlobal.lastPage !== "about") return
+                    console.log('This should be working')
+                    $("#bye").addClass('text-center')
+                    $("#bye").addClass('img-fluid')
                 }
             });
         });
