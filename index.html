@@ -116,7 +116,6 @@
         const home = document.getElementById('home')
         const logo = document.getElementById('logo')
         const logoTitle = document.getElementById('logoTitle')
-
         const pageContent = document.getElementById('pageContent')
         const activePage = function(newPage) {
             if (window.tinyFoxesGlobal.lastPage === newPage) {
@@ -126,12 +125,24 @@
             $(`#${window.tinyFoxesGlobal.lastPage}`).removeClass('active')
             $(`#${newPage}`).addClass('active')
         }
-        const xhr = new XMLHttpRequest();
-        about.onclick = function () {
+        const fadeContentInOut = async function() {
+            const startingTime = Date.now()
+            for (;((startingTime - Date.now()) / 1000) >= 10;) {
+                const secondsNow = Date.now() - startingTime
+
+                const content = document.getElementById('pageContent')
+                content.style.opacity = `0.${parseInt((secondsNow - startingTime) / 1000)}`
+            }
+        }
+
+        about.onclick = async function () {
             pageContent.innerHTML = ""
             $("#pageContent").load("about.html")
             activePage('about')
             window.tinyFoxesGlobal.lastPage = "about"
+            await fadeContentInOut()
+            const content = document.getElementById('pageContent')
+            content.style.opacity = "1.0"
         }
         projects.onclick = function () {
             pageContent.innerHTML = ""
