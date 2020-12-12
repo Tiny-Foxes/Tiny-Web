@@ -125,10 +125,17 @@
             $(`#${window.tinyFoxesGlobal.lastPage}`).removeClass('active')
             $(`#${newPage}`).addClass('active')
         }
-
+        const content = document.getElementById('pageContent')
         about.onclick = async function () {
-            // pageContent.innerHTML = ""
-            // $("#pageContent").load("about.html")
+            const startTime = Date.now()
+            const intervalID = setInterval(function() {
+                content.style.opacity = `0.${10 - ((Date.now() - startTime) / 1000)}`
+            }, 100)
+            setTimeout(function() {
+                clearInterval(intervalID)
+            }, 10000)
+            pageContent.innerHTML = ""
+            $("#pageContent").load("about.html")
             activePage('about')
             window.tinyFoxesGlobal.lastPage = "about"
         }
