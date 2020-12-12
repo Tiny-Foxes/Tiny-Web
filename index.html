@@ -163,7 +163,7 @@
         }
 
         $(document).ready(function () {
-            const w_w = $(window).width()
+            let w_w = $(window).width()
             if (w_w <= 600) {
                 if (window.tinyFoxesGlobal.lastPage !== "about") return
                 $("#pageContent").addClass('text-center')
