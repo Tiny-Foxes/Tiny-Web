@@ -127,12 +127,20 @@
             $(`#${newPage}`).addClass('active')
         }
         const content = document.getElementById('pageContent')
-
+        const resizeSmall = function () {
+            let w_w = $(window).width()
+            if (w_w <= 768) {
+                if (window.tinyFoxesGlobal.lastPage !== "about") return
+                $("#bye").addClass('text-center')
+                $("#bye").addClass('img-fluid')
+            }
+        }
         about.onclick = async function () {
             pageContent.innerHTML = ""
             $("#pageContent").load("about.html")
             activePage('about')
             window.tinyFoxesGlobal.lastPage = "about"
+            resizeSmall()
         }
 
         projects.onclick = function () {
@@ -165,7 +173,7 @@
 
         $(document).ready(function () {
             let w_w = $(window).width()
-            if (w_w <= 600) {
+            if (w_w <= 768) {
                 if (window.tinyFoxesGlobal.lastPage !== "about") return
                 $("#bye").addClass('text-center')
                 $("#bye").addClass('img-fluid')
