@@ -128,9 +128,8 @@
         }
         const content = document.getElementById('pageContent')
         const resizeSmall = function () {
-            let w_w = $(window).width()
+            const w_w = $(window).width()
             if (w_w <= 768) {
-                if (window.tinyFoxesGlobal.lastPage !== "about") return
                 $("#bye").addClass('text-center')
                 $("#bye").addClass('img-fluid')
             }
