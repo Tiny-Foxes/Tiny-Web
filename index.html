@@ -126,14 +126,8 @@
             $(`#${newPage}`).addClass('active')
         }
         const content = document.getElementById('pageContent')
+
         about.onclick = async function () {
-            const startTime = Date.now()
-            const intervalID = setInterval(function() {
-                content.style.opacity = `0.${10 - ((Date.now() - startTime) / 1000)}`
-            }, 100)
-            setTimeout(function() {
-                clearInterval(intervalID)
-            }, 10000)
             pageContent.innerHTML = ""
             $("#pageContent").load("about.html")
             activePage('about')
@@ -167,6 +161,24 @@
             activePage('home')
             window.tinyFoxesGlobal.lastPage = "home"
         }
+
+        $(document).ready(function () {
+            const w_w = $(window).width()
+            if (w_w <= 600) {
+                if (window.tinyFoxesGlobal.lastPage !== "about") return
+                $("#pageContent").addClass('text-center')
+                $("#pageContent").addClass('img-fluid')
+            }
+            // onResize
+            $(window).resize(function () {
+                w_w = $(window).width()
+                if (w_w > 600) {
+                    if (window.tinyFoxesGlobal.lastPage !== "about") return
+                    $("#pageContent").removeClass('text-center')
+                    $("#pageContent").removeClass('img-fluid')
+                }
+            });
+        });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
