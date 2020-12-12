@@ -117,7 +117,7 @@
         const logo = document.getElementById('logo')
         const logoTitle = document.getElementById('logoTitle')
         const pageContent = document.getElementById('pageContent')
-        const activePage = function(newPage) {
+        const activePage = function (newPage) {
             if (window.tinyFoxesGlobal.lastPage === newPage) {
                 return
             }
@@ -125,43 +125,38 @@
             $(`#${window.tinyFoxesGlobal.lastPage}`).removeClass('active')
             $(`#${newPage}`).addClass('active')
         }
-        const fadeContentInOut = async function() {
-            const startingTime = Date.now()
-            for (;((startingTime - Date.now()) / 1000) >= 10;) {
-                const secondsNow = Date.now() - startingTime
-
-                const content = document.getElementById('pageContent')
-                content.style.opacity = `0.${parseInt((secondsNow - startingTime) / 1000)}`
-            }
-        }
 
         about.onclick = async function () {
             pageContent.innerHTML = ""
             $("#pageContent").load("about.html")
             activePage('about')
             window.tinyFoxesGlobal.lastPage = "about"
-            await fadeContentInOut()
-            const content = document.getElementById('pageContent')
-            content.style.opacity = "1.0"
+            for (opacity = 0; opacity < 1.1; opacity = opacity + 0.1) {
+                setTimeout(function () { document.getElementById('about').style.opacity = opacity; }, 100)
+            }
         }
+
         projects.onclick = function () {
             pageContent.innerHTML = ""
             $("#pageContent").load("projects.html")
             activePage('projects')
             window.tinyFoxesGlobal.lastPage = "projects"
         }
+
         home.onclick = function () {
             pageContent.innerHTML = ""
             $("#pageContent").load("home.html")
             activePage('home')
             window.tinyFoxesGlobal.lastPage = "home"
         }
+
         logo.onclick = function () {
             pageContent.innerHTML = ""
             $("#pageContent").load("home.html")
             activePage('home')
             window.tinyFoxesGlobal.lastPage = "home"
         }
+
         logoTitle.onclick = function () {
             pageContent.innerHTML = ""
             $("#pageContent").load("home.html")
@@ -172,4 +167,5 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </body>
+
 </html>
