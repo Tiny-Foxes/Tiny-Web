@@ -111,6 +111,7 @@
     <script type="module">
         window.tinyFoxesGlobal = {}
         window.tinyFoxesGlobal.lastPage = "home"
+        window.tinyFoxesGlobal.smallScreen = false
         const about = document.getElementById('about')
         const projects = document.getElementById('projects')
         const home = document.getElementById('home')
@@ -174,14 +175,19 @@
                 w_w = $(window).width()
                 if (w_w > 600) {
                     if (window.tinyFoxesGlobal.lastPage !== "about") return
-                    console.log('This should be working')
+                    if (!window.tinyFoxesGlobal.smallScreen) return
+                    console.log('Got bigger, remove center.')
+                    console.log(w_w)
                     $("#bye").removeClass('text-center')
                     $("#bye").removeClass('img-fluid')
                 } else {
                     if (window.tinyFoxesGlobal.lastPage !== "about") return
-                    console.log('This should be working')
+                    if (window.tinyFoxesGlobal.smallScreen) return
+                    console.log('Got smaller, adding center.')
+                    console.log(w_w)
                     $("#bye").addClass('text-center')
                     $("#bye").addClass('img-fluid')
+                    window.tinyFoxesGlobal.smallScreen = true
                 }
             });
         });
