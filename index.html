@@ -16,7 +16,7 @@
         <a id="logo" class="navbar-brand">
             <img src="tinyFoxes.png" height="40" alt="tinyFoxes">
         </a>
-        <a id="logoTitle" class="navbar-brand mr-3">TinyFoxes</a>
+        <a type="button" id="logoTitle" class="navbar-brand mr-3">TinyFoxes</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -25,13 +25,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link active" id="home">Home <span class="sr-only">(current)</span></a>
+                    <a type="button" class="nav-link active hover-shadow" id="home">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="projects">Projects</a>
+                    <a type="button" class="nav-link hover-shadow" id="projects">Projects</a>
                 </li>
                 <li class="nav-item">
-                    <a id="about" class="nav-link">About Us</a>
+                    <a type="button" id="about" class="nav-link hover-shadow">About Us</a>
                 </li>
             </ul>
         </div>
@@ -60,40 +60,38 @@
                 <div class="col-md-4">
                     <h2>OutFox-Translations</h2>
                     <p>Repository for translation files for OutFox.</p>
-                    <p><a href="https://www.tutorialrepublic.com/html-tutorial/" target="_blank"
-                            class="btn btn-success">Learn More &raquo;</a></p>
-                </div>
-                <div class="col-md-4">
-                    <h2>SoundWaves-Colors</h2>
-                    <p>Community made color schemes for SoundWaves.</p>
-                    <p><a href="https://www.tutorialrepublic.com/css-tutorial/" target="_blank"
-                            class="btn btn-success">Learn More &raquo;</a></p>
-                </div>
-                <div class="col-md-4">
-                    <h2>MoondanceWeb</h2>
-                    <p>Language files for the Project Moondance website.</p>
-                    <p><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/" target="_blank"
-                            class="btn btn-success">Learn More &raquo;</a></p>
+                    <p><a href="https://github.com/Tiny-Foxes/OutFox-Translations" target="_blank"
+                            class="btn btn-success">Check Repository &raquo;</a></p>
                 </div>
                 <div class="col-md-4">
                     <h2>Simply-Love-OutFox</h2>
-                    <p>a fork of Simply Love focused on additional tweaks for compatibility and integrations with
-                        StepMania
-                        OutFox 5.3.</p>
-                    <p><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/" target="_blank"
-                            class="btn btn-success">Learn More &raquo;</a></p>
+                    <p>a fork of Simply Love focused on additional tweaks for compatibility and integrations with StepMania OutFox 5.3</p>
+                    <p><a href="https://github.com/Tiny-Foxes/Simply-Love-OutFox" target="_blank"
+                            class="btn btn-success">Check Repository &raquo;</a></p>
                 </div>
                 <div class="col-md-4">
                     <h2>sm5-legacy</h2>
                     <p>The legacy theme from StepMania 5.0.x with slight performance tweaks for OutFox.</p>
-                    <p><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/" target="_blank"
-                            class="btn btn-success">Learn More &raquo;</a></p>
+                    <p><a href="https://github.com/Tiny-Foxes/sm5-legacy" target="_blank"
+                            class="btn btn-success">Check Repository &raquo;</a></p>
+                </div>
+                <div class="col-md-4">
+                    <h2>SoundWaves-Colors</h2>
+                    <p>Community made color schemes for SoundWaves</p>
+                    <p><a href="https://github.com/Tiny-Foxes/SoundWaves-Colors" target="_blank"
+                            class="btn btn-success">Check Repository &raquo;</a></p>
                 </div>
                 <div class="col-md-4">
                     <h2>Translation-Toolkit</h2>
-                    <p>A small application to automate some tasks for translators.</p>
-                    <p><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/" target="_blank"
-                            class="btn btn-success">Learn More &raquo;</a></p>
+                    <p>A small application to automate some tasks for translators</p>
+                    <p><a href="https://github.com/Tiny-Foxes/Translation-Toolkit" target="_blank"
+                            class="btn btn-success">Check Repository &raquo;</a></p>
+                </div>
+                <div class="col-md-4">
+                    <h2>MoondanceWeb</h2>
+                    <p>Language files for the Project Moondance website</p>
+                    <p><a href="https://github.com/Tiny-Foxes/MoondanceWeb" target="_blank"
+                            class="btn btn-success">Check Repository &raquo;</a></p>
                 </div>
             </div>
             <hr>
@@ -134,7 +132,9 @@
                 $("#bye").addClass('img-fluid')
             }
         }
+
         about.onclick = async function () {
+            if (window.tinyFoxesGlobal.lastPage === "about") return;
             pageContent.innerHTML = ""
             $("#pageContent").load("about.html")
             activePage('about')
@@ -143,6 +143,7 @@
         }
 
         projects.onclick = function () {
+            if (window.tinyFoxesGlobal.lastPage === "projects") return;
             pageContent.innerHTML = ""
             $("#pageContent").load("projects.html")
             activePage('projects')
@@ -150,6 +151,7 @@
         }
 
         home.onclick = function () {
+            if (window.tinyFoxesGlobal.lastPage === "home") return;
             pageContent.innerHTML = ""
             $("#pageContent").load("home.html")
             activePage('home')
@@ -157,6 +159,7 @@
         }
 
         logo.onclick = function () {
+            if (window.tinyFoxesGlobal.lastPage === "home") return;
             pageContent.innerHTML = ""
             $("#pageContent").load("home.html")
             activePage('home')
@@ -164,6 +167,7 @@
         }
 
         logoTitle.onclick = function () {
+            if (window.tinyFoxesGlobal.lastPage === "home") return;
             pageContent.innerHTML = ""
             $("#pageContent").load("home.html")
             activePage('home')
@@ -176,6 +180,7 @@
                 if (window.tinyFoxesGlobal.lastPage !== "about") return
                 $("#bye").addClass('text-center')
                 $("#bye").addClass('img-fluid')
+                window.tinyFoxesGlobal.smallScreen = true
             }
             // onResize
             $(window).resize(function () {
