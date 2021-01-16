@@ -4,7 +4,7 @@ const members = [
     'Gabrimax98', 'hanubeki', 'JapanYoshi', 'Jousway', 'JustMoneko',
     'Kaede573', 'KannushiLink', 'Ksempac', 'ListenerJubatus', 'MattMayuga',
     'MechMaelstrom', 'MrThatKid', 'nitroburr', 'Rosho128', 'Scraticus',
-    'snil4', 'vithov1120', 'XeroOl'
+    'snil4', 'vithov1120', 'XeroOl', 'jose1771'
 ]
 const membersWithDescription = {
     'moruzerinho6': 'No more than one, not less than one.',
