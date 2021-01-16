@@ -33,7 +33,7 @@ for (let i = 0; i < members.length; i++) {
     const name = document.createElement('p')
     const boldName = document.createElement('strong')
     boldName.innerHTML = members[i]
-    name.setAttribute('style', 'fontsize: medium; textAlign: center')
+    name.setAttribute('style', 'fontsize: medium')
     name.appendChild(boldName)
 
     profileAnchor.appendChild(avatar)
@@ -46,6 +46,7 @@ for (let i = 0; i < members.length; i++) {
         current.appendChild(description)
     }
     membersElem.appendChild(current)
+    membersElem.setAttribute('style', 'text-align: center')
 }
 
 $(window).resize(function () {
