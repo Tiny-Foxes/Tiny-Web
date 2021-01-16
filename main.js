@@ -47,7 +47,7 @@ for (let i = 0; i < members.length; i++) {
 }
 
 $(window).resize(function () {
-    w_w = $(window).width()
+    const w_w = $(window).width()
     if (w_w < 900) {
         membersElem.style.fontSize = 'small'
     }
