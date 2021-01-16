@@ -33,7 +33,7 @@ for (let i = 0; i < members.length; i++) {
     const name = document.createElement('p')
     const boldName = document.createElement('strong')
     boldName.innerHTML = members[i]
-    name.setAttribute('style', 'fontsize: medium; left: 50%')
+    name.setAttribute('style', 'fontsize: medium; textAlign: center')
     name.appendChild(boldName)
 
     profileAnchor.appendChild(avatar)
@@ -52,5 +52,7 @@ $(window).resize(function () {
     const w_w = $(window).width()
     if (w_w < 900) {
         membersElem.style.fontSize = 'small'
+    } else {
+        membersElem.style.fontSize = 'medium'
     }
 });
