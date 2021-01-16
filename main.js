@@ -30,9 +30,10 @@ for (let i = 0; i < members.length; i++) {
     avatar.setAttribute('height', 150)
     avatar.src = `members/${members[i]}.png`
 
-    const name = document.createElement('h2')
+    const name = document.createElement('p')
     const boldName = document.createElement('strong')
     boldName.innerHTML = members[i]
+    name.style.fontSize = 'medium'
     name.appendChild(boldName)
 
     profileAnchor.appendChild(avatar)
@@ -40,6 +41,7 @@ for (let i = 0; i < members.length; i++) {
     current.appendChild(profileAnchor)
     if (membersWithDescription[members[i]]) {
         const description = document.createElement('p')
+        description.style.fontSize = 'small'
         description.innerHTML = membersWithDescription[members[i]]
         current.appendChild(description)
     }
