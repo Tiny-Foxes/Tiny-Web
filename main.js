@@ -34,6 +34,7 @@ for (let i = 0; i < members.length; i++) {
     const boldName = document.createElement('strong')
     boldName.innerHTML = members[i]
     name.style.fontSize = 'medium'
+    name.style.setAttribute('style', 'fontsize: medium; left: 50%')
     name.appendChild(boldName)
 
     profileAnchor.appendChild(avatar)
