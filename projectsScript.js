@@ -163,7 +163,7 @@ let contentDiv = document.getElementById('bye')
 for (let i = 0; i < repos.length; i++) {
     const currentRepo = repos[i]
     const repoDiv = document.createElement('div')
-    repoDiv.classList.add('col-md-4')
+    repoDiv.classList.add('col-md-6')
 
     const nameAnchor = document.createElement('a')
     nameAnchor.href = `https://github.com/Tiny-Foxes/${currentRepo.name}`
@@ -175,6 +175,11 @@ for (let i = 0; i < repos.length; i++) {
     nameAnchor.appendChild(repoName)
 
     const repoDescription = document.createElement('p')
+
+    /*if ((i % 1) === 0) {
+
+    }*/
+    repoDescription.setAttribute('style', 'height: 48px')
     repoDescription.innerHTML = currentRepo.description
 
     const items = document.createElement('div')
@@ -184,9 +189,8 @@ for (let i = 0; i < repos.length; i++) {
     contributors.innerHTML = 'Contributors'
     items.appendChild(contributors)
 
-    const [ball, secondBall, thirdBall] = [document.createElement('div'), document.createElement('div'), document.createElement('div')]
     for (let i = 0; i < 3; i++) {
-        let currentBall = [ball, secondBall, thirdBall][i]
+        let currentBall = document.createElement('div')
 
         if (currentRepo.contributors.length >= i + 1) {
             currentBall = document.createElement('img')
