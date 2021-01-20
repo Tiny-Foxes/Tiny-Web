@@ -1,4 +1,6 @@
-const repos = [
+$(() => {
+    console.log('called')
+let repos = [
     {
         name: "OutFox-Translations",
         description: "Repository for translation files for OutFox.",
@@ -156,7 +158,7 @@ const repos = [
     }
 ]
 
-const contentDiv = document.getElementById('bye')
+let contentDiv = document.getElementById('bye')
 
 for (let i = 0; i < repos.length; i++) {
     const currentRepo = repos[i]
@@ -211,3 +213,4 @@ for (let i = 0; i < repos.length; i++) {
 
     contentDiv.appendChild(repoDiv)
 } 
+})

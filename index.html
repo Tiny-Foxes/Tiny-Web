@@ -136,7 +136,7 @@
         about.onclick = async function () {
             if (window.tinyFoxesGlobal.lastPage === "about") return;
             pageContent.innerHTML = ""
-            $("#pageContent").load("about.html")
+            $("#pageContent").load("about.html", () => { $.getScript('./aboutScript.js')})
             activePage('about')
             window.tinyFoxesGlobal.lastPage = "about"
             resizeSmall()
@@ -145,7 +145,7 @@
         projects.onclick = function () {
             if (window.tinyFoxesGlobal.lastPage === "projects") return;
             pageContent.innerHTML = ""
-            $("#pageContent").load("projects.html")
+            $("#pageContent").load("projects.html", () => { $.getScript('./projectsScript.js')})
             activePage('projects')
             window.tinyFoxesGlobal.lastPage = "projects"
         }
