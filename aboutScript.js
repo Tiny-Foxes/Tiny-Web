@@ -18,6 +18,9 @@ const membersElem = document.getElementById('bye')
 for (let i = 0; i < members.length; i++) {
     const current = document.createElement('div')
     current.classList.add('col-md-3')
+    if (i % 4) {
+        current.setAttribute('style', 'border-style: none none none outset')
+    }
 
     const profileAnchor = document.createElement('a')
     profileAnchor.target = "_blank"
