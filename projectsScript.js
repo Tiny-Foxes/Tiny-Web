@@ -164,6 +164,9 @@ for (let i = 0; i < repos.length; i++) {
     const currentRepo = repos[i]
     const repoDiv = document.createElement('div')
     repoDiv.classList.add('col-md-6')
+    if (i === 0 || (i % 2) === 0) {
+        repoDiv.setAttribute('style', 'border-style: none inset none none')
+    }
 
     const nameAnchor = document.createElement('a')
     nameAnchor.href = `https://github.com/Tiny-Foxes/${currentRepo.name}`
@@ -199,16 +202,6 @@ for (let i = 0; i < repos.length; i++) {
             items.appendChild(currentBall)
         }
     }
-    
-    /*
-    const checkRepository = document.createElement('p')
-    const checkRepoAnchor = document.createElement('a')
-    checkRepoAnchor.href = `https://github.com/Tiny-Foxes/${currentRepo.name}`
-    checkRepoAnchor.target = '_blank'
-    checkRepoAnchor.classList.add('btn', 'btn-success')
-    checkRepoAnchor.innerHTML = 'Check Repository &raquo;'
-    checkRepository.appendChild(checkRepoAnchor)
-    */
 
     repoDiv.appendChild(nameAnchor)
     repoDiv.appendChild(repoDescription)
