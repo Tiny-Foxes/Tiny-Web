@@ -32,6 +32,9 @@
                     <a type="button" class="nav-link hover-shadow" id="projects">Projects</a>
                 </li>
                 <li class="nav-item">
+                    <a type="button" id="news" class="nav-link hover-shadow">News</a>
+                </li>
+                <li class="nav-item">
                     <a type="button" id="about" class="nav-link hover-shadow">About Us</a>
                 </li>
             </ul>
@@ -55,40 +58,28 @@
 
             <div class="row">
                 <div class="col-md-4">
-                    <h2>OutFox-Translations</h2>
+                    <a style="color: black" href="https://github.com/Tiny-Foxes/OutFox-Translations"><h2>OutFox-Translations</h2></a>
                     <p>Repository for translation files for OutFox.</p>
-                    <p><a href="https://github.com/Tiny-Foxes/OutFox-Translations" target="_blank"
-                            class="btn btn-success">Check Repository &raquo;</a></p>
                 </div>
                 <div class="col-md-4">
-                    <h2>Simply-Love-OutFox</h2>
+                    <a style="color: black" href="https://github.com/Tiny-Foxes/Simply-Love-OutFox"><h2>Simply-Love-OutFox</h2></a>
                     <p>a fork of Simply Love focused on additional tweaks for compatibility and integrations with StepMania OutFox 5.3</p>
-                    <p><a href="https://github.com/Tiny-Foxes/Simply-Love-OutFox" target="_blank"
-                            class="btn btn-success">Check Repository &raquo;</a></p>
                 </div>
                 <div class="col-md-4">
-                    <h2>sm5-legacy</h2>
+                    <a style="color: black" href="https://github.com/Tiny-Foxes/sm5-legacy"><h2>sm5-legacy</h2></a>
                     <p>The legacy theme from StepMania 5.0.x with slight performance tweaks for OutFox.</p>
-                    <p><a href="https://github.com/Tiny-Foxes/sm5-legacy" target="_blank"
-                            class="btn btn-success">Check Repository &raquo;</a></p>
                 </div>
                 <div class="col-md-4">
-                    <h2>SoundWaves-Colors</h2>
+                    <a style="color: black" href="https://github.com/Tiny-Foxes/SoundWaves-Colors"><h2>SoundWaves-Colors</h2></a>
                     <p>Community made color schemes for SoundWaves</p>
-                    <p><a href="https://github.com/Tiny-Foxes/SoundWaves-Colors" target="_blank"
-                            class="btn btn-success">Check Repository &raquo;</a></p>
                 </div>
                 <div class="col-md-4">
-                    <h2>Translation-Toolkit</h2>
+                    <a style="color: black" href="https://github.com/Tiny-Foxes/Translation-Toolkit"><h2>Translation-Toolkit</h2></a>
                     <p>A small application to automate some tasks for translators</p>
-                    <p><a href="https://github.com/Tiny-Foxes/Translation-Toolkit" target="_blank"
-                            class="btn btn-success">Check Repository &raquo;</a></p>
                 </div>
                 <div class="col-md-4">
-                    <h2>MoondanceWeb</h2>
+                    <a style="color: black" href="https://github.com/Tiny-Foxes/MoondanceWeb"><h2>MoondanceWeb</h2></a>
                     <p>Language files for the Project Moondance website</p>
-                    <p><a href="https://github.com/Tiny-Foxes/MoondanceWeb" target="_blank"
-                            class="btn btn-success">Check Repository &raquo;</a></p>
                 </div>
             </div>
             <hr>
@@ -103,16 +94,18 @@
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://unpkg.com/@popperjs/core@2"></script>
-    <script src="https://unpkg.com/tippy.js@6"></script>
+    <script src="https://unpkg.com/popper.js@1"></script>
+    <script src="https://unpkg.com/tippy.js@5"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <script type="module">
+        $('[data-toggle="tooltip"]').tooltip()
         window.tinyFoxesGlobal = {}
         window.tinyFoxesGlobal.lastPage = "home"
         window.tinyFoxesGlobal.smallScreen = false
         const about = document.getElementById('about')
         const projects = document.getElementById('projects')
         const home = document.getElementById('home')
+        const news = document.getElementById('news')
         const logo = document.getElementById('logo')
         const logoTitle = document.getElementById('logoTitle')
         const pageContent = document.getElementById('pageContent')
@@ -139,6 +132,15 @@
             $("#pageContent").load("about.html", () => { $.getScript('./aboutScript.js')})
             activePage('about')
             window.tinyFoxesGlobal.lastPage = "about"
+            resizeSmall()
+        }
+
+        news.onclick = async function () {
+            if (window.tinyFoxesGlobal.lastPage === "news") return;
+            pageContent.innerHTML = ""
+            $("#pageContent").load("news.html")
+            activePage('news')
+            window.tinyFoxesGlobal.lastPage = "news"
             resizeSmall()
         }
 
@@ -186,6 +188,11 @@
             // onResize
             $(window).resize(function () {
                 w_w = $(window).width()
+
+                if (window.tinyFoxesGlobal.lastPage === 'about') {
+                    return
+                }
+
                 if (w_w > 768) {
                     if (window.tinyFoxesGlobal.lastPage !== "about") return
                     if (!window.tinyFoxesGlobal.smallScreen) return

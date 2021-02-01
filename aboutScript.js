@@ -193,41 +193,30 @@ $(() => {
                 }
             }
 
-            const moreInfo = document.createElement('div')
-            const infoIcon = document.createElement('i')
-            infoIcon.classList.add('fas', 'fa-caret-down')
-            moreInfo.setAttribute('style', 'position: absolute; top: 0; right: 0')
 
-            tippy(moreInfo, {
-                content: `
-                <a style="display: table-cell; vertical-align: middle" target="_blank" href=https://github.com/${members[i]}>
-                    <p>View Github Profile</p>
-                </a>
-                `,
-                allowHTML: true,
-                interactive: true,
-                placement: 'bottom'
-            })
-            moreInfo.appendChild(infoIcon)
             const profileAnchor = document.createElement('a')
-    
+            const avatarAnchor = document.createElement('a')
+
             const avatar = document.createElement('img')
             avatar.classList.add('rounded-circle')
             avatar.setAttribute('style', 'max-width: 380px')
             avatar.setAttribute('width', 150)
             avatar.setAttribute('height', 150)
             avatar.src = `members/${members[i]}.png`
-    
+            avatarAnchor.href = `https://github.com/${members[i]}`
+            avatarAnchor.target = '_blank'
+
             const name = document.createElement('p')
             const boldName = document.createElement('strong')
             boldName.innerHTML = members[i]
             name.setAttribute('style', 'fontsize: medium')
             name.appendChild(boldName)
-    
-            profileAnchor.appendChild(avatar)
+
+            avatarAnchor.append(avatar)
+            profileAnchor.appendChild(avatarAnchor)
             profileAnchor.appendChild(name)
+
             current.appendChild(profileAnchor)
-            current.appendChild(moreInfo)
             if (membersWithDescription[members[i]]) {
                 const description = document.createElement('p')
                 description.style.fontSize = 'small'
@@ -253,32 +242,13 @@ $(() => {
     const filteredMembers = () => {
         let memberList = members
 
-        if (filters.has('rizu')) {
-            memberList = memberList.filter(m => specialStatus[m] && specialStatus[m].teamRizu)
-        }
+        const possibleFilters = ['rizu', 'moondance', 'founder', 'translator', 'noteskin', 'judgment', 'tool']
+        const checkObjects = ['teamRizu', 'projectMoondance', 'tinyFoxesFounder', 'translator', 'noteskinMaker', 'judgmentMaker', 'toolMaker']
 
-        if (filters.has('moondance')) {
-            memberList = memberList.filter(m => specialStatus[m] && specialStatus[m].projectMoondance)
-        }
-
-        if (filters.has('founder')) {
-            memberList = memberList.filter(m => specialStatus[m] && specialStatus[m].tinyFoxesFounder)
-        }
-
-        if (filters.has('translator')) {
-            memberList = memberList.filter(m => specialStatus[m] && specialStatus[m].translator)
-        }
-
-        if (filters.has('noteskin')) {
-            memberList = memberList.filter(m => specialStatus[m] && specialStatus[m].noteskinMaker)
-        }
-
-        if (filters.has('judgment')) {
-            memberList = memberList.filter(m => specialStatus[m] && specialStatus[m].judgmentMaker)
-        }
-
-        if (filters.has('tool')) {
-            memberList = memberList.filter(m => specialStatus[m] && specialStatus[m].toolMaker)
+        for (let i = 0; i < possibleFilters.length; i++) {
+            if (filters.has(possibleFilters[i])) {
+                memberList = memberList.filter(m => specialStatus[m] && specialStatus[m][checkObjects[i]])
+            }
         }
 
         return memberList
