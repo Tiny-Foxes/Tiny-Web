@@ -7,13 +7,25 @@
     <title>TinyFoxes</title>
     <!-- Bootstrap CSS file -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
     <link rel="icon" href="tinyFoxes.png">
+    <style>
+        canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+    </style>
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #788deb;">
         <a id="logo" class="navbar-brand">
             <img src="tinyFoxes.png" height="40" alt="tinyFoxes">
         </a>
@@ -26,7 +38,8 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a type="button" class="nav-link active hover-shadow" id="home">Home <span class="sr-only">(current)</span></a>
+                    <a type="button" class="nav-link active hover-shadow" id="home">Home <span
+                            class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a type="button" class="nav-link hover-shadow" id="projects">Projects</a>
@@ -43,11 +56,6 @@
 
     <div id="pageContent">
         <div class="text-center">
-            <h2>We're a big community group</h2>
-            <p>In Tiny-Foxes, we host project that have been made with the community itself, we range
-                from
-                translations all the way up to whole themes for OutFox.<br /></p>
-            <hr>
             <h2>Pinned Projects</h2>
             <p>Our pinned repositories do not mean our main repositories, we can and will change it at
                 any
@@ -55,32 +63,57 @@
         </div>
 
         <div class="container">
-
             <div class="row">
                 <div class="col-md-4">
-                    <a style="color: black" href="https://github.com/Tiny-Foxes/OutFox-Translations"><h2>OutFox-Translations</h2></a>
+                    <a style="color: black" href="https://github.com/Tiny-Foxes/OutFox-Translations">
+                        <h2>OutFox-Translations</h2>
+                    </a>
                     <p>Repository for translation files for OutFox.</p>
                 </div>
                 <div class="col-md-4">
-                    <a style="color: black" href="https://github.com/Tiny-Foxes/Simply-Love-OutFox"><h2>Simply-Love-OutFox</h2></a>
-                    <p>a fork of Simply Love focused on additional tweaks for compatibility and integrations with StepMania OutFox 5.3</p>
+                    <a style="color: black" href="https://github.com/Tiny-Foxes/Simply-Love-OutFox">
+                        <h2>Simply-Love-OutFox</h2>
+                    </a>
+                    <p>a fork of Simply Love focused on additional tweaks for compatibility and integrations with
+                        StepMania OutFox 5.3</p>
                 </div>
                 <div class="col-md-4">
-                    <a style="color: black" href="https://github.com/Tiny-Foxes/sm5-legacy"><h2>sm5-legacy</h2></a>
+                    <a style="color: black" href="https://github.com/Tiny-Foxes/sm5-legacy">
+                        <h2>sm5-legacy</h2>
+                    </a>
                     <p>The legacy theme from StepMania 5.0.x with slight performance tweaks for OutFox.</p>
                 </div>
                 <div class="col-md-4">
-                    <a style="color: black" href="https://github.com/Tiny-Foxes/SoundWaves-Colors"><h2>SoundWaves-Colors</h2></a>
+                    <a style="color: black" href="https://github.com/Tiny-Foxes/SoundWaves-Colors">
+                        <h2>SoundWaves-Colors</h2>
+                    </a>
                     <p>Community made color schemes for SoundWaves</p>
                 </div>
                 <div class="col-md-4">
-                    <a style="color: black" href="https://github.com/Tiny-Foxes/Translation-Toolkit"><h2>Translation-Toolkit</h2></a>
+                    <a style="color: black" href="https://github.com/Tiny-Foxes/Translation-Toolkit">
+                        <h2>Translation-Toolkit</h2>
+                    </a>
                     <p>A small application to automate some tasks for translators</p>
                 </div>
                 <div class="col-md-4">
-                    <a style="color: black" href="https://github.com/Tiny-Foxes/MoondanceWeb"><h2>MoondanceWeb</h2></a>
+                    <a style="color: black" href="https://github.com/Tiny-Foxes/MoondanceWeb">
+                        <h2>MoondanceWeb</h2>
+                    </a>
                     <p>Language files for the Project Moondance website</p>
                 </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <h2>We're a big community group</h2>
+                <img src="tinyFoxes.png" class="img-fluid" style="height: 180px;">
+                <p>In Tiny-Foxes, we host project that have been made with the community itself, we range
+                    from
+                    translations all the way up to whole themes for OutFox.<br /></p>
+                <p>If you have a project that supports OutFox or you want to support any of our projects, you can join
+                    us!
+                    Join <a href="https://discord.gg/cN4TjgQdcA" target="_blank">Project Moondance Discord Server</a>
+                    and
+                    talk with <strong>Moru Zerinho6#9939</strong></p>
             </div>
             <hr>
             <footer>
@@ -92,7 +125,6 @@
             </footer>
         </div>
     </div>
-
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://unpkg.com/popper.js@1"></script>
     <script src="https://unpkg.com/tippy.js@5"></script>
@@ -129,7 +161,7 @@
         about.onclick = async function () {
             if (window.tinyFoxesGlobal.lastPage === "about") return;
             pageContent.innerHTML = ""
-            $("#pageContent").load("about.html", () => { $.getScript('./aboutScript.js')})
+            $("#pageContent").load("about.html", () => { $.getScript('./aboutScript.js') })
             activePage('about')
             window.tinyFoxesGlobal.lastPage = "about"
             resizeSmall()
@@ -147,7 +179,7 @@
         projects.onclick = function () {
             if (window.tinyFoxesGlobal.lastPage === "projects") return;
             pageContent.innerHTML = ""
-            $("#pageContent").load("projects.html", () => { $.getScript('./projectsScript.js')})
+            $("#pageContent").load("projects.html", () => { $.getScript('./projectsScript.js') })
             activePage('projects')
             window.tinyFoxesGlobal.lastPage = "projects"
         }

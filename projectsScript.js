@@ -360,10 +360,10 @@ $(() => {
 
         if (topicFilter.has("theme")) {
             topicFilter.delete("theme")
-            translationFilter.style.background = '#eaf5ff'
+            themeFilter.style.background = '#eaf5ff'
         } else {
             topicFilter.add("theme")
-            translationFilter.style.background = '#15202f'
+            themeFilter.style.background = '#15202f'
         }
 
         generateRepos(reposByFilters())
@@ -372,10 +372,10 @@ $(() => {
     toolFilter.onclick = () => {
         if (topicFilter.has("tool")) {
             topicFilter.delete("tool")
-            translationFilter.style.background = '#eaf5ff'
+            toolFilter.style.background = '#eaf5ff'
         } else {
             topicFilter.add("tool")
-            translationFilter.style.background = '#15202f'
+            toolFilter.style.background = '#15202f'
         }
 
         generateRepos(reposByFilters())
@@ -384,10 +384,10 @@ $(() => {
     judgmentFilter.onclick = () => {
         if (topicFilter.has("judgment")) {
             topicFilter.delete("judgment")
-            translationFilter.style.background = '#eaf5ff'
+            judgmentFilter.style.background = '#eaf5ff'
         } else {
             topicFilter.add("judgment")
-            translationFilter.style.background = '#15202f'
+            judgmentFilter.style.background = '#15202f'
         }
 
         generateRepos(reposByFilters())
@@ -396,10 +396,10 @@ $(() => {
     noteskinFilter.onclick = () => {
         if (topicFilter.has("noteskin")) {
             topicFilter.delete("noteskin")
-            translationFilter.style.background = '#eaf5ff'
+            noteskinFilter.style.background = '#eaf5ff'
         } else {
             topicFilter.add("noteskin")
-            translationFilter.style.background = '#15202f'
+            noteskinFilter.style.background = '#15202f'
         }
         
         generateRepos(reposByFilters())
