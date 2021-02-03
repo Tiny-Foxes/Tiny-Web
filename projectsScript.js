@@ -164,10 +164,21 @@ $(() => {
             contributors: ["Jousway"],
             topics: ["theme"],
         },
+        {
+            name: "Tiny-Web",
+            description: "The Tiny-Foxes Website",
+            contributors: ["moruzerinho6"],
+            topics: ["tool"],
+        },
         /*{
             name: "Tiny-Manager",
             description: "Quick look at Tiny-Foxes projects.",
-            contributors: ['moruzerinho6', 'JoseVarelaP', 'ListenerJubatus']
+            contributors: ['moruzerinho6']
+        },*/
+        /*{
+            name: "Simply-Love-PL",
+            description: "Polish Translation for Simply Love (Work in progress)",
+            contributors: ['JustMoneko']
         },*/
         {
             name: "Lambda-PL",
