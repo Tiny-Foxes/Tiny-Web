@@ -211,6 +211,12 @@ $(() => {
             contributors: ["JapanYoshi"],
             topics: ["judgment"],
         },
+        {
+            name: "porting-scripts",
+            description: "Scripts for porting modfiles from NotITG to OutFox",
+            contributors: ["Sudospective"],
+            topics: ["tool"],
+        }
     ]
 
     const generateRepos = (repos) => {

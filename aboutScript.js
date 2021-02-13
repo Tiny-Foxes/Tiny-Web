@@ -5,7 +5,7 @@ $(() => {
         'SHRMP0', 'SheepyChris', 'AppleArcade120', 'TeamRizu', 'akym-tsubby',
         'DanielRotwind', 'JapanYoshi', 'Kaede573', 'KannushiLink', 'Ksempac', 
         'MattMayuga', 'MechMaelstrom', 'Rosho128', 'snil4', 'vithov1120', 
-        'XeroOl', 'jose1771'
+        'XeroOl', 'jose1771', 'Sudospective'
     ]
     const membersWithDescription = {
         'moruzerinho6': 'No more than one, not less than one.',
@@ -13,6 +13,7 @@ $(() => {
         'TeamRizu': 'The creators of StepMania OutFox',
         'Rosho128': 'Hi, My name is Bakhtiar "Rosho" Yasmeen, and I want to help you.',
         'Scraticus': 'Old Bastard, DJ, and musically minded programmer and teacher.',
+        'Sudospective': 'Hi, I\'m Avery. You can call me Sudo. I nag my computers to do things for me.'
     }
     const specialStatus = {
         JoseVarelaP: {
@@ -112,6 +113,9 @@ $(() => {
             noteskinMaker: true
         },
         XeroOl: {
+            toolMaker: true
+        },
+        Sudospective: {
             toolMaker: true
         }
     }
