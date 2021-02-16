@@ -31,7 +31,7 @@ $(() => {
         {
             name: "SoundWaves-Colors",
             description: "Community made color schemes for SoundWaves",
-            contributors: ["moruzerinho6", "Rosho128", "AppleArcade120"],
+            contributors: ["moruzerinho6", "Rosho128", "AppleArcade120", 'snil4', 'JustMoneko'],
             topics: ["theme"],
         },
         {
@@ -219,6 +219,7 @@ $(() => {
         }
     ]
 
+    
     const generateRepos = (repos) => {
         const contentDiv = document.getElementById("bye")
 
