@@ -212,6 +212,12 @@ $(() => {
             description: "<i>This program will make a translator view file for your translation .ini and make you translation job easier</i>",
             contributors: ["snil4"],
             topics: ["tool"],
+        },
+        {
+            name: "sm5-mirin-plugins",
+            description: "This is the repository for plugins that are compatible with the notitg-mirin template.",
+            contributors: ["Sudospective"],
+            topics: ["tool"],
         }
     ]
     
