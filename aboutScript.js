@@ -68,7 +68,8 @@ $(() => {
             translator: true
         },
         snil4: {
-            translator: true
+            translator: true,
+            toolMaker: true
         },
         SHRMP0: {
             translator: true

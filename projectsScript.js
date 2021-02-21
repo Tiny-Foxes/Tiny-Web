@@ -170,16 +170,6 @@ $(() => {
             contributors: ["moruzerinho6"],
             topics: ["tool"],
         },
-        /*{
-            name: "Tiny-Manager",
-            description: "Quick look at Tiny-Foxes projects.",
-            contributors: ['moruzerinho6']
-        },*/
-        /*{
-            name: "Simply-Love-PL",
-            description: "Polish Translation for Simply Love (Work in progress)",
-            contributors: ['JustMoneko']
-        },*/
         {
             name: "Lambda-PL",
             description: 'Polish (PL) Translation for StepMania 5.3 "Lambda" theme',
@@ -216,9 +206,15 @@ $(() => {
             description: "Scripts for porting modfiles from NotITG to OutFox",
             contributors: ["Sudospective"],
             topics: ["tool"],
+        },
+        {
+            name: "Stepmania-TranslatorViewMaker",
+            description: "<i>This program will make a translator view file for your translation .ini and make you translation job easier</i>",
+            contributors: ["snil4"],
+            topics: ["tool"],
         }
     ]
-
+    
     
     const generateRepos = (repos) => {
         const contentDiv = document.getElementById("bye")
