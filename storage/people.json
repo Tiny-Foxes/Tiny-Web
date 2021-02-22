@@ -1,0 +1,123 @@
+{
+    "members": [
+        "Scraticus", "concubidated", "ListenerJubatus", "JoseVarelaP", "Jousway",
+        "MrThatKid", "moruzerinho6", "ArcticFqx", "hanubeki", "Gabrimax98", "JustMoneko",
+        "SHRMP0", "SheepyChris", "AppleArcade120", "teamRizu", "akym-tsubby",
+        "DanielRotwind", "JapanYoshi", "Kaede573", "KannushiLink", "Ksempac", 
+        "MattMayuga", "MechMaelstrom", "Rosho128", "snil4", "vithov1120", 
+        "XeroOl", "jose1771", "Sudospective"
+    ],
+    "membersWithDescription": {
+        "moruzerinho6": "No more than one, not less than one.",
+        "JoseVarelaP": "A programmer that normally does themes for NotITG, OpenITG and SM5. Currently a developer for Project MoonDance.",
+        "teamRizu": "The creators of StepMania OutFox",
+        "Rosho128": "Hi, My name is Bakhtiar \"Rosho\" Yasmeen, and I want to help you.",
+        "Scraticus": "Old Bastard, DJ, and musically minded programmer and teacher.",
+        "Sudospective": "Hi, I'm Avery. You can call me Sudo. I nag my computers to do things for me."
+    },
+    "specialStatus": {
+        "JoseVarelaP": {
+            "teamRizu": true,
+            "projectMoondance": true,
+            "translator": true
+        },
+        "ListenerJubatus": {
+            "teamRizu": true,
+            "projectMoondance": true,
+            "noteskinMaker": true,
+            "judgmentMaker": true
+        },
+        "MrThatKid": {
+            "teamRizu": true,
+            "projectMoondance": true
+        },
+        "Scraticus": {
+            "teamRizu": true,
+            "projectMoondance": true,
+            "tinyFoxesFounder": true,
+            "toolMaker": true
+        },
+        "concubidated": {
+            "teamRizu": true,
+            "projectMoondance": true
+        },
+        "Jousway": {
+            "teamRizu": true,
+            "projectMoondance": true,
+            "noteskinMaker": true
+        },
+        "moruzerinho6": {
+            "projectMoondance": true,
+            "tinyFoxesFounder": true,
+            "translator": true,
+            "toolMaker": true
+        },
+        "JustMoneko": {
+            "projectMoondance": true,
+            "translator": true
+        },
+        "Gabrimax98": {
+            "projectMoondance": true,
+            "translator": true
+        },
+        "ArcticFqx": {
+            "projectMoondance": true
+        },
+        "hanubeki": {
+            "projectMoondance": true,
+            "translator": true
+        },
+        "snil4": {
+            "translator": true,
+            "toolMaker": true
+        },
+        "SHRMP0": {
+            "translator": true
+        },
+        "SheepyChris": {
+            "translator": true
+        },
+        "DanielRotwind": {
+            "translator": true
+        },
+        "Kaede573": {
+            "translator": true
+        },
+        "Ksempac": {
+            "translator": true,
+            "toolMaker": true
+        },
+        "vithov1120": {
+            "translator": true
+        },
+        "jose1771": {
+            "translator": true
+        },
+        "akym-tsubby": {
+            "noteskinMaker": true
+        },
+        "AppleArcade120": {
+            "judgmentMaker": true,
+            "noteskinMaker": true
+        },
+        "JapanYoshi": {
+            "judgmentMaker": true,
+            "noteskinMaker": true
+        },
+        "KannushiLink": {
+            "judgmentMaker": true
+        },
+        "MattMayuga": {
+            "judgmentMaker": true
+        },
+        "MechMaelstrom": {
+            "noteskinMaker": true
+        },
+        "XeroOl": {
+            "toolMaker": true
+        },
+        "Sudospective": {
+            "toolMaker": true
+        }
+    }
+}
