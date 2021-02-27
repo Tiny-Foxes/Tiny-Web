@@ -21,7 +21,7 @@ export const main = async () => {
         nameAnchor.setAttribute("style", "color: black")
         const repoName = document.createElement("p")
         repoName.innerHTML = currentRepo.name
-        repoName.setAttribute("style", "font-size: 32px; font-weight:bold")
+        repoName.setAttribute("style", "font-size: 32px; font-weight: bold")
         nameAnchor.appendChild(repoName)
 
         const repoDescription = document.createElement("p")
@@ -40,10 +40,10 @@ export const main = async () => {
         for (let i = 0; i < currentRepo.topics.length; i++) {
           const currentTopic = document.createElement("p")
           currentTopic.innerHTML = currentRepo.topics[i]
-          currentTopic.classList.add("mr-1")
+          currentTopic.classList.add("mr-1", sessionStorage.getItem('theme') === 'light' ? 'bg-light' : 'bg-dark')
           currentTopic.setAttribute(
             "style",
-            "width: 90px; border-radius: 50px; font-size: 16px; color: #58A6FF; line-height: 25px; text-align:center; background: #eaf5ff"
+            "width: 90px; border-radius: 50px; font-size: 16px; color: #58A6FF; line-height: 25px; text-align:center"
           )
           topics.appendChild(currentTopic)
         }
@@ -69,9 +69,8 @@ export const main = async () => {
               "style",
               "width: 50px; height: 50px; border-radius: 100%; margin-left: 8px"
             )
-            tippy(currentBall, {
-              content: `${currentRepo.contributors[i]}`,
-            })
+            currentBall.setAttribute('data-toggle', 'tooltip')
+            currentBall.title = currentRepo.contributors[i]
             items.appendChild(currentBall)
           }
         }
@@ -88,6 +87,11 @@ export const main = async () => {
     // repos
     $.getJSON('storage/repos.json', (repoData) => {
       const repos = repoData.data
+      /**
+       * Returns an array with all contributors from all repos.
+       * @function
+       * @returns {string[]}
+       */
       const allContributors = () => {
         let contributors = []
   
@@ -109,6 +113,11 @@ export const main = async () => {
       const repoFilters = ["translation", "theme", "tool", "judgment", "noteskin"]
       const topicFilter = new Set()
       const memberFilter = new Set()
+      /**
+       * 
+       * @function
+       * @returns {object[]}
+       */
       const reposByFilters = () => {
         let reposArr = repos
   
@@ -131,15 +140,17 @@ export const main = async () => {
       for (let i = 0; i < contributorsList.length; i++) {
         const line = document.createElement("li")
         const anchor = document.createElement("a")
-        anchor.classList.add("dropdown-item")
+        anchor.classList.add("dropdown-item", sessionStorage.getItem('theme') === 'light' ? 'bg-light' : 'bg-dark')
         anchor.innerHTML = `<img src="members/${contributorsList[i]}.png" style="height: 32px">  ${contributorsList[i]}`
         anchor.onclick = () => {
-          memberFilter.has(contributorsList[i])
-            ? memberFilter.delete(contributorsList[i]) &&
-              line.setAttribute("style", "")
-            : memberFilter.add(contributorsList[i]) &&
-              line.setAttribute("style", "background-color: #58A6FF")
-  
+          if (memberFilter.has(contributorsList[i])) {
+            memberFilter.delete(contributorsList[i])
+            line.classList.remove('text-primary')
+          } else {
+            memberFilter.add(contributorsList[i])
+            line.classList.add('text-primary')
+          }
+
           generateRepos(reposByFilters())
         }
         line.appendChild(anchor)
@@ -151,65 +162,45 @@ export const main = async () => {
       const toolFilter = document.getElementById("toolFilter")
       const judgmentFilter = document.getElementById("judgmentFilter")
       const noteskinFilter = document.getElementById("noteskinFilter")
-  
-      translationFilter.onclick = () => {
-        if (topicFilter.has("translation")) {
-          topicFilter.delete("translation")
-          translationFilter.style.background = "#eaf5ff"
+
+      /**
+       * Applies the filters
+       * @function
+       * @param {HTMLElement} filterObj - The elem which is clicked to apply the filter
+       * @param {string} filter - The filter name, see repoFilters variable
+       */
+      const filterIn = (filterObj, filter) => {
+        if (topicFilter.has(filter)) {
+          topicFilter.delete(filter)
+          filterObj.classList.remove(`${sessionStorage.getItem('theme') === 'light' ? 'bg-dark' : 'bg-light'}`)
+          filterObj.classList.add(`bg-${sessionStorage.getItem('theme')}`)
         } else {
-          topicFilter.add("translation")
-          translationFilter.style.background = "#15202f"
+          topicFilter.add(filter)
+          filterObj.classList.remove(`bg-${sessionStorage.getItem('theme')}`)
+          filterObj.classList.add(`${sessionStorage.getItem('theme') === 'light' ? 'bg-dark' : 'bg-light'}`)
         }
   
         generateRepos(reposByFilters())
+      }
+
+      translationFilter.onclick = () => {
+        filterIn(translationFilter, 'translation')
       }
   
       themeFilter.onclick = () => {
-        if (topicFilter.has("theme")) {
-          topicFilter.delete("theme")
-          themeFilter.style.background = "#eaf5ff"
-        } else {
-          topicFilter.add("theme")
-          themeFilter.style.background = "#15202f"
-        }
-  
-        generateRepos(reposByFilters())
+        filterIn(themeFilter, 'theme')
       }
   
       toolFilter.onclick = () => {
-        if (topicFilter.has("tool")) {
-          topicFilter.delete("tool")
-          toolFilter.style.background = "#eaf5ff"
-        } else {
-          topicFilter.add("tool")
-          toolFilter.style.background = "#15202f"
-        }
-  
-        generateRepos(reposByFilters())
+        filterIn(toolFilter, 'tool')
       }
   
       judgmentFilter.onclick = () => {
-        if (topicFilter.has("judgment")) {
-          topicFilter.delete("judgment")
-          judgmentFilter.style.background = "#eaf5ff"
-        } else {
-          topicFilter.add("judgment")
-          judgmentFilter.style.background = "#15202f"
-        }
-  
-        generateRepos(reposByFilters())
+        filterIn(judgmentFilter, 'judgment')
       }
   
       noteskinFilter.onclick = () => {
-        if (topicFilter.has("noteskin")) {
-          topicFilter.delete("noteskin")
-          noteskinFilter.style.background = "#eaf5ff"
-        } else {
-          topicFilter.add("noteskin")
-          noteskinFilter.style.background = "#15202f"
-        }
-  
-        generateRepos(reposByFilters())
+        filterIn(noteskinFilter, 'noteskin')
       }
   
       generateRepos(repos)

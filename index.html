@@ -11,11 +11,16 @@
         integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
         crossorigin="anonymous" />
     <link rel="icon" href="tinyFoxes.png">
+    <style>
+        hr {
+            border-color: #91c2d9;
+        }
+    </style>
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #788deb;">
+    <nav id="tinyNavbar" class="navbar navbar-expand-lg navbar-light bg-light">
         <a id="logo" class="navbar-brand">
             <img src="tinyFoxes.png" height="40px" alt="tinyFoxes">
         </a>
@@ -24,7 +29,6 @@
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
@@ -38,9 +42,13 @@
                     <a type="button" id="news" class="nav-link hover-shadow">News</a>
                 </li>
                 <li class="nav-item">
-                    <a type="button" id="about" class="nav-link hover-shadow">About Us</a>
+                    <a type="button" id="about" class="nav-link hover-shadow">Members</a>
                 </li>
             </ul>
+        </div>
+        <div class="flex-end custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="switchTheme">
+            <label id="darkSwitchText" class="custom-control-label text-dark" for="switchTheme">Dark</label>
         </div>
     </nav>
 

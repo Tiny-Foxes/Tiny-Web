@@ -39,50 +39,42 @@ export const main = async () => {
             switch (Object.keys(statuses)[s]) {
               case 'teamRizu':
                 special.src = 'members/TeamRizu.png'
-                tippy(special, {
-                  content:
-                    members[i] === 'Scraticus'
-                      ? 'Team Rizu Lead'
-                      : 'Team Rizu Member',
-                })
+                special.setAttribute('data-toggle', 'tooltip')
+                special.title = members[i] === 'Scraticus'
+                ? 'Team Rizu Lead'
+                : 'Team Rizu Member'
                 break
               case 'projectMoondance':
                 special.src = 'projectMoondance.png'
-                tippy(special, {
-                  content: 'Project Moondance Staff',
-                })
+                special.setAttribute('data-toggle', 'tooltip')
+                special.title = 'Project Moondance Staff'
                 break
               case 'tinyFoxesFounder':
                 special.src = 'tinyFoxes.png'
-                tippy(special, {
-                  content: 'TinyFoxes Founder',
-                })
+                special.setAttribute('data-toggle', 'tooltip')
+                special.title = 'TinyFoxes Founder'
                 break
               case 'translator':
                 special = document.createElement('i')
                 special.classList.add('fas', 'fa-language', 'fa-xs')
-                tippy(special, {
-                  content: 'Translator',
-                })
+                special.setAttribute('data-toggle', 'tooltip')
+                special.title = 'Translator'
                 break
               case 'noteskinMaker':
                 special.src = 'arrowup.png'
-                tippy(special, {
-                  content: 'Noteskin Maker',
-                })
+                special.setAttribute('data-toggle', 'tooltip')
+                special.title = 'Noteskin Maker'
                 break
               case 'judgmentMaker':
                 special.src = 'yeah.png'
-                tippy(special, {
-                  content: 'Judgment Maker',
-                })
+                special.setAttribute('data-toggle', 'tooltip')
+                special.title = 'Judgment Maker'
                 break
               case 'toolMaker':
                 special = document.createElement('i')
                 special.classList.add('fas', 'fa-tools', 'fa-sm')
-                tippy(special, {
-                  content: 'Tool Maker',
-                })
+                special.setAttribute('data-toggle', 'tooltip')
+                special.title = 'Tool Maker'
                 break
               default:
                 break
@@ -181,7 +173,7 @@ export const main = async () => {
       /**
        * Applies the filters.
        * @function
-       * @param {object} filterObj - The element that needs to be clicked to enable the filter.
+       * @param {HTMLElement} filterObj - The element that needs to be clicked to enable the filter.
        * @param {string} filter - The filter name, look possibleFilters array.
        * @param {Set<string>} filters - The filters Set.
        */

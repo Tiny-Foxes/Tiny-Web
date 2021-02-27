@@ -2,11 +2,11 @@
     <div id="filterByTopic">
         <h2 style="display: flex; justify-content: center;">Filter by topic</h2>
         <div id='filtersDiv' style='display: flex; justify-content: center;'>
-            <p id="translationFilter" class="mr-1" style="width: 80px; border-radius: 50px; font-size: 16px; color: #58A6FF; line-height:25px; text-align:center; background: #eaf5ff">translation</p>
-            <p id="themeFilter" class="mr-1" style="width: 80px; border-radius: 50px; font-size: 16px; color: #58A6FF; line-height:25px; text-align:center; background: #eaf5ff">theme</p>
-            <p id="toolFilter" class="mr-1" style="width: 80px; border-radius: 50px; font-size: 16px; color: #58A6FF; line-height:25px; text-align:center; background: #eaf5ff">tool</p>
-            <p id="judgmentFilter" class="mr-1" style="width: 80px; border-radius: 50px; font-size: 16px; color: #58A6FF; line-height:25px; text-align:center; background: #eaf5ff">judgment</p>
-            <p id="noteskinFilter" class="mr-1" style="width: 80px; border-radius: 50px; font-size: 16px; color: #58A6FF; line-height:25px; text-align:center; background: #eaf5ff">noteskin</p>
+            <p id="translationFilter" class="mr-1 bg-light" style="width: 80px; border-radius: 50px; font-size: 16px; color: #58A6FF; line-height:25px; text-align:center">translation</p>
+            <p id="themeFilter" class="mr-1 bg-light" style="width: 80px; border-radius: 50px; font-size: 16px; color: #58A6FF; line-height:25px; text-align:center">theme</p>
+            <p id="toolFilter" class="mr-1 bg-light" style="width: 80px; border-radius: 50px; font-size: 16px; color: #58A6FF; line-height:25px; text-align:center">tool</p>
+            <p id="judgmentFilter" class="mr-1 bg-light" style="width: 80px; border-radius: 50px; font-size: 16px; color: #58A6FF; line-height:25px; text-align:center">judgment</p>
+            <p id="noteskinFilter" class="mr-1 bg-light" style="width: 80px; border-radius: 50px; font-size: 16px; color: #58A6FF; line-height:25px; text-align:center">noteskin</p>
         </div>
     </div>
     <div>
@@ -27,4 +27,19 @@
             </div>
         </div>
     </footer>
+    <script>
+        if (sessionStorage.getItem('theme') === 'light') {
+            translationFilter.classList.add('bg-light')
+            themeFilter.classList.add('bg-light')
+            toolFilter.classList.add('bg-light')
+            judgmentFilter.classList.add('bg-light')
+            noteskinFilter.classList.add('bg-light')
+        } else {
+            translationFilter.classList.add('bg-dark')
+            themeFilter.classList.add('bg-dark')
+            toolFilter.classList.add('bg-dark')
+            judgmentFilter.classList.add('bg-dark')
+            noteskinFilter.classList.add('bg-dark')
+        }
+    </script>
 </div>

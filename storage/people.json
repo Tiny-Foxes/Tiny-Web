@@ -50,7 +50,8 @@
             "projectMoondance": true,
             "tinyFoxesFounder": true,
             "translator": true,
-            "toolMaker": true
+            "toolMaker": true,
+            "teamRizu": true
         },
         "JustMoneko": {
             "projectMoondance": true,
@@ -72,10 +73,12 @@
             "toolMaker": true
         },
         "SHRMP0": {
-            "translator": true
+            "translator": true,
+            "projectMoondance": true
         },
         "SheepyChris": {
-            "translator": true
+            "translator": true,
+            "projectMoondance": true
         },
         "DanielRotwind": {
             "translator": true
