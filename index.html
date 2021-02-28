@@ -47,7 +47,7 @@
             </ul>
         </div>
         <div class="flex-end custom-control custom-switch">
-            <input type="checkbox" class="custom-control-input" id="switchTheme">
+            <input type="checkbox" class="custom-control-input" id="switchTheme" name="my-checkbox">
             <label id="darkSwitchText" class="custom-control-label text-dark" for="switchTheme">Dark</label>
         </div>
     </nav>
@@ -125,6 +125,13 @@
     <script src="https://unpkg.com/popper.js@1"></script>
     <script src="https://unpkg.com/tippy.js@5"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script>
+        if (localStorage.getItem('theme') && localStorage.getItem('theme') === 'dark') {
+            const supposedlyDarkText = document.getElementById('darkSwitchText')
+
+            supposedlyDarkText.innerText = 'White'
+        }
+    </script>
     <script type="module" src="./main.js"></script>
 </body>
 

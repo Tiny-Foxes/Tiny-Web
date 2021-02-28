@@ -40,7 +40,7 @@ export const main = async () => {
         for (let i = 0; i < currentRepo.topics.length; i++) {
           const currentTopic = document.createElement("p")
           currentTopic.innerHTML = currentRepo.topics[i]
-          currentTopic.classList.add("mr-1", sessionStorage.getItem('theme') === 'light' ? 'bg-light' : 'bg-dark')
+          currentTopic.classList.add("mr-1", localStorage.getItem('theme') === 'light' ? 'bg-light' : 'bg-dark')
           currentTopic.setAttribute(
             "style",
             "width: 90px; border-radius: 50px; font-size: 16px; color: #58A6FF; line-height: 25px; text-align:center"
@@ -114,7 +114,7 @@ export const main = async () => {
       const topicFilter = new Set()
       const memberFilter = new Set()
       /**
-       * 
+       * Returns repos taking the filters into account.
        * @function
        * @returns {object[]}
        */
@@ -140,7 +140,7 @@ export const main = async () => {
       for (let i = 0; i < contributorsList.length; i++) {
         const line = document.createElement("li")
         const anchor = document.createElement("a")
-        anchor.classList.add("dropdown-item", sessionStorage.getItem('theme') === 'light' ? 'bg-light' : 'bg-dark')
+        anchor.classList.add("dropdown-item", localStorage.getItem('theme') === 'light' ? 'bg-light' : 'bg-dark')
         anchor.innerHTML = `<img src="members/${contributorsList[i]}.png" style="height: 32px">  ${contributorsList[i]}`
         anchor.onclick = () => {
           if (memberFilter.has(contributorsList[i])) {
@@ -172,12 +172,12 @@ export const main = async () => {
       const filterIn = (filterObj, filter) => {
         if (topicFilter.has(filter)) {
           topicFilter.delete(filter)
-          filterObj.classList.remove(`${sessionStorage.getItem('theme') === 'light' ? 'bg-dark' : 'bg-light'}`)
-          filterObj.classList.add(`bg-${sessionStorage.getItem('theme')}`)
+          filterObj.classList.remove(`${localStorage.getItem('theme') === 'light' ? 'bg-dark' : 'bg-light'}`)
+          filterObj.classList.add(`bg-${localStorage.getItem('theme')}`)
         } else {
           topicFilter.add(filter)
-          filterObj.classList.remove(`bg-${sessionStorage.getItem('theme')}`)
-          filterObj.classList.add(`${sessionStorage.getItem('theme') === 'light' ? 'bg-dark' : 'bg-light'}`)
+          filterObj.classList.remove(`bg-${localStorage.getItem('theme')}`)
+          filterObj.classList.add(`${localStorage.getItem('theme') === 'light' ? 'bg-dark' : 'bg-light'}`)
         }
   
         generateRepos(reposByFilters())

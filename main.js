@@ -4,8 +4,8 @@ $('[data-toggle="tooltip"]').tooltip()
 const lastPage = new Set()
 lastPage.add('home')
 const smallScreen = new Set()
-if (!sessionStorage.getItem('theme')) {
-  sessionStorage.setItem('theme', 'light')
+if (!localStorage.getItem('theme')) {
+  localStorage.setItem('theme', 'light')
 }
 const about = document.getElementById("about")
 const projects = document.getElementById("projects")
@@ -77,7 +77,7 @@ const applyTheme = () => {
     switchPage('about', aboutScript.main)
   }
 
-  if (sessionStorage.getItem('theme') === 'dark') {
+  if (localStorage.getItem('theme') === 'dark') {
     document.body.style.backgroundColor = '#06090f'
     document.getElementsByTagName('style')[0].innerHTML = `h1, li, h2, h3, h4, h5, p { 
       color: #91c2d9; 
@@ -131,13 +131,13 @@ const applyTheme = () => {
 }
 
 themeSwitch.onclick = () => {
-  if (sessionStorage.getItem('theme') === 'dark') {
-    sessionStorage.clear()
-    sessionStorage.setItem('theme','light')
+  if (localStorage.getItem('theme') === 'dark') {
+    localStorage.clear()
+    localStorage.setItem('theme','light')
     applyTheme()
   } else {
-    sessionStorage.clear()
-    sessionStorage.setItem('theme', 'dark')
+    localStorage.clear()
+    localStorage.setItem('theme', 'dark')
     applyTheme()
   }
 }
