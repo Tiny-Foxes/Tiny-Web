@@ -3,8 +3,8 @@ export const main = async () => {
 		/**
 		 * 
 		 * @param {string[]} members 
-		 * @param {object} specialStatus 
-		 * @param {object} membersWithDescription 
+		 * @param {Object.<string, Object.<string, boolean>>} specialStatus
+		 * @param {Object.<string, string>} membersWithDescription 
 		 */
     const generateProfiles = (
       members,
@@ -123,7 +123,20 @@ export const main = async () => {
     }
 
     // uses data
-    $.getJSON('storage/people.json', (data) => {
+
+    /**
+     * @typedef peopleData
+     * @property {string[]} members 
+     * @property {Object.<string, Object.<string, boolean>>} specialStatus 
+     * @property {Object.<string, string>} membersWithDescription  
+     */
+
+    $.getJSON('storage/people.json', 
+    /**
+     * 
+     * @param {peopleData} data
+     */    
+    (data) => {
       const { members, specialStatus, membersWithDescription } = data
 
       generateProfiles(members, specialStatus, membersWithDescription)
