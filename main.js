@@ -4,9 +4,15 @@ $('[data-toggle="tooltip"]').tooltip()
 const lastPage = new Set()
 lastPage.add('home')
 const smallScreen = new Set()
+
 if (!localStorage.getItem('theme')) {
   localStorage.setItem('theme', 'light')
 }
+
+if (!localStorage.getItem('language')) {
+  localStorage.setItem('language', 'english')
+}
+
 const about = document.getElementById("about")
 const projects = document.getElementById("projects")
 const home = document.getElementById("home")
@@ -17,6 +23,7 @@ const pageContent = document.getElementById("pageContent")
 const themeSwitch = document.getElementById('switchTheme')
 const navbar = document.getElementById('tinyNavbar')
 const darkText = document.getElementById('darkSwitchText')
+const languages = document.getElementById('languageList')
 const activePage = (newPage) => {
   if (lastPage.has(newPage)) {
     return
@@ -34,6 +41,63 @@ const resizeSmall = () => {
   }
 }
 
+const convert = (iniData) => {
+  const finalObj = {}
+	const lines = iniData.split('\n')
+	let group
+	let match
+  
+  for (let i = 0; i !== lines.length; i++){
+    if (match = lines[i].match(/^\s*\[(.+?)\]\s*$/)) {
+      finalObj[match[1]] = group = finalObj[match[1]] || {};
+    } else if (group && (match = lines[i].match(/^\s*([^#].*?)\s*=\s*(.*?)\s*$/))) {
+      group[match[1]] = match[2];
+    }
+	}
+
+	return finalObj;
+}
+
+const translate = (language = localStorage.getItem('language'), specificPage) => {
+  $.get(`languages/${language}.ini`, (data) => {
+    const translation = convert(data)
+    const pageName = specificPage || lastPage.keys().next().value
+    const translatedSection = translation[pageName]
+    const keys = Object.keys(translatedSection)
+
+    for (let i = 0; i < keys.length; i++) {
+      const elem = document.querySelector(`[data-translation='${keys[i]}']`)
+      if (elem) {
+        // Special tooltip cases.
+        if (elem.getAttribute('data-toggle') !== null && elem.getAttribute('data-toggle') === 'tooltip') {
+          elem.title = translatedSection[keys[i]]
+        } else {
+          elem.innerHTML = translatedSection[keys[i]]
+        }
+      }
+    }
+    
+  })
+}
+
+const translated = [
+  "english",
+  "portugues-br"
+]
+
+for (let i = 0; i < translated.length; i++) {
+  const line = document.createElement('li')
+  const anchor = document.createElement('a')
+  anchor.innerHTML = translated[i]
+  anchor.classList.add('dropdown-item')
+  anchor.onclick = () => {
+    localStorage.setItem('language', translated[i])
+    translate(localStorage.getItem('language'))
+  }
+  line.appendChild(anchor)
+  languages.appendChild(line)
+}
+
 const switchPage = async (page, script, args) => {
   if (lastPage.has(page)) return
   pageContent.innerHTML = ""
@@ -46,6 +110,9 @@ const switchPage = async (page, script, args) => {
   resizeSmall()
   lastPage.clear()
   lastPage.add(page)
+  setTimeout(() => {
+    translate(localStorage.getItem('language'))
+  }, 500)
 }
 
 about.onclick = async () => {
@@ -144,6 +211,7 @@ themeSwitch.onclick = () => {
 
 $(document).ready(() => {
   applyTheme()
+  translate(localStorage.getItem('language'))
   $("body").tooltip({ selector: '[data-toggle=tooltip]' });
   let w_w = $(window).width()
   if (w_w <= 768) {

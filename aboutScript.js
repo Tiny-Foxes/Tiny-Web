@@ -39,46 +39,50 @@ export const main = async () => {
             switch (Object.keys(statuses)[s]) {
               case 'teamRizu':
                 special.src = 'members/TeamRizu.png'
-                special.setAttribute('data-toggle', 'tooltip')
-                special.title = members[i] === 'Scraticus'
-                ? 'Team Rizu Lead'
-                : 'Team Rizu Member'
+                if (members[i] === 'Scraticus') {
+                  special.setAttribute('data-translation', 'teamRizuLeadTooltip')
+                  special.title = 'Team Rizu Lead'
+                } else {
+                  special.setAttribute('data-translation', 'teamRizuTooltip')
+                  special.title = 'Team Rizu Member'
+                }
                 break
               case 'projectMoondance':
                 special.src = 'projectMoondance.png'
-                special.setAttribute('data-toggle', 'tooltip')
+                special.setAttribute('data-translation', 'projectMoondanceTooltip')
                 special.title = 'Project Moondance Staff'
                 break
               case 'tinyFoxesFounder':
                 special.src = 'tinyFoxes.png'
-                special.setAttribute('data-toggle', 'tooltip')
+                special.setAttribute('data-translation', 'tinyFounderTooltip')
                 special.title = 'TinyFoxes Founder'
                 break
               case 'translator':
                 special = document.createElement('i')
                 special.classList.add('fas', 'fa-language', 'fa-xs')
-                special.setAttribute('data-toggle', 'tooltip')
+                special.setAttribute('data-translation', 'translatorTooltip')
                 special.title = 'Translator'
                 break
               case 'noteskinMaker':
                 special.src = 'arrowup.png'
-                special.setAttribute('data-toggle', 'tooltip')
+                special.setAttribute('data-translation', 'noteskinMakerTooltip')
                 special.title = 'Noteskin Maker'
                 break
               case 'judgmentMaker':
                 special.src = 'yeah.png'
-                special.setAttribute('data-toggle', 'tooltip')
+                special.setAttribute('data-translation', 'judgmentMakerTooltip')
                 special.title = 'Judgment Maker'
                 break
               case 'toolMaker':
                 special = document.createElement('i')
                 special.classList.add('fas', 'fa-tools', 'fa-sm')
-                special.setAttribute('data-toggle', 'tooltip')
+                special.setAttribute('data-translation', 'toolMakerTooltip')
                 special.title = 'Tool Maker'
                 break
               default:
                 break
             }
+            special.setAttribute('data-toggle', 'tooltip')
             special.setAttribute(
               'style',
               'display: flex; width: 16px; height: 16px; text-align: center; align-items: flex-start; justify-content: flex-end'

@@ -32,41 +32,45 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a type="button" class="nav-link active hover-shadow" id="home">Home <span
-                            class="sr-only">(current)</span></a>
+                    <a type="button" class="nav-link active hover-shadow" id="home" data-translation="home">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a type="button" class="nav-link hover-shadow" id="projects">Projects</a>
+                    <a type="button" class="nav-link hover-shadow" id="projects" data-translation="projects">Projects</a>
                 </li>
                 <li class="nav-item">
-                    <a type="button" id="news" class="nav-link hover-shadow">News</a>
+                    <a type="button" id="news" class="nav-link hover-shadow" data-translation="news">News</a>
                 </li>
                 <li class="nav-item">
-                    <a type="button" id="about" class="nav-link hover-shadow">Members</a>
+                    <a type="button" id="about" class="nav-link hover-shadow" data-translation="members">Members</a>
                 </li>
             </ul>
         </div>
         <div class="flex-end custom-control custom-switch">
             <input type="checkbox" class="custom-control-input" id="switchTheme" name="my-checkbox">
-            <label id="darkSwitchText" class="custom-control-label text-dark" for="switchTheme">Dark</label>
+            <label id="darkSwitchText" class="custom-control-label text-dark" for="switchTheme" data-translation="dark">Dark</label>
+        </div>
+        <div class="flex-end">
+            <button class="btn btn-info dropdown-toggle" style="margin-left: 20px;"type="button" id="languageMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-translation="selectLanguage">Select Language</button>
+            <ul id="languageList" style="height: auto; max-height: 200px; overflow-x: hidden;" class="dropdown-menu dropdown-menu-right bg-dark" aria-labelledby="languageMenuButton">
+            </ul>
         </div>
     </nav>
 
     <div id="pageContent">
         <div class="text-center">
-            <h2>We're a big community group</h2>
+            <h2 data-translation="communityGroup">We're a big community group</h2>
                 <img src="tinyFoxes.png" class="img-fluid" style="height: 180px;">
-                <p>In Tiny-Foxes, we host project that have been made with the community itself, we range
+                <p data-translation="tinyFoxesPorpuse">In Tiny-Foxes, we host project that have been made with the community itself, we range
                     from
                     translations all the way up to whole themes for OutFox.<br /></p>
-                <p>If you have a project that supports OutFox or you want to support any of our projects, you can join
+                <p data-translation="tinyFoxesInvite">If you have a project that supports OutFox or you want to support any of our projects, you can join
                     us!
                     Join <a href="https://discord.gg/cN4TjgQdcA" target="_blank">Project Moondance Discord Server</a>
                     and
                     talk with <strong>Moru Zerinho6#9939</strong></p>
             <hr>
-            <h2>Pinned Projects</h2>
-            <p>Our pinned repositories do not mean our main repositories, we can and will change it at
+            <h2 data-translation="pinnedProjects">Pinned Projects</h2>
+            <p data-translation="pinnedProjectsExplanation">Our pinned repositories do not mean our main repositories, we can and will change it at
                 any
                 time for any reason.</p>
         </div>
@@ -129,7 +133,7 @@
         if (localStorage.getItem('theme') && localStorage.getItem('theme') === 'dark') {
             const supposedlyDarkText = document.getElementById('darkSwitchText')
 
-            supposedlyDarkText.innerText = 'White'
+            supposedlyDarkText.setAttribute('data-translation', 'light')
         }
     </script>
     <script type="module" src="./main.js"></script>
