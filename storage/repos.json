@@ -22,22 +22,39 @@
             "topics": ["theme"]
         },
         {
+            "name": "Simply-Love-PL",
+            "description":
+                "Polish Translation for Simply Love (Work in progress for OutFox branches)",
+            "contributors": ["JustMoneko"],
+            "topics": ["translation"]
+        },
+        {
             "name": "sm5-legacy",
             "description":
                 "The legacy theme from StepMania 5.0.x with slight performance tweaks for OutFox.",
-            "contributors": ["MrThatKid", "JoseVarelaP"],
+            "contributors": [
+                "MrThatKid", 
+                "JoseVarelaP"
+            ],
             "topics": ["theme"]
         },
         {
             "name": "SoundWaves-Colors",
             "description": "Community made color schemes for SoundWaves",
-            "contributors": ["moruzerinho6", "Rosho128", "AppleArcade120"],
+            "contributors": [
+                "moruzerinho6", 
+                "Rosho128", 
+                "AppleArcade120"
+            ],
             "topics": ["theme"]
         },
         {
             "name": "Translation-Toolkit",
             "description": "A small application to automate some tasks for translators",
-            "contributors": ["Ksempac", "moruzerinho6"],
+            "contributors": [
+                "Ksempac", 
+                "moruzerinho6"
+            ],
             "topics": ["tool"]
         },
         {
@@ -50,13 +67,20 @@
             "name": "smtheme-soundwaves-community",
             "description":
                 "Community version of Soundwaves, the StepMania 5.3 default theme.",
-            "contributors": ["ListenerJubatus", "moruzerinho6", "Rosho128"],
+            "contributors": [
+                "ListenerJubatus", 
+                "moruzerinho6", 
+                "Rosho128"
+            ],
             "topics": ["theme"]
         },
         {
             "name": "Outfox-fr",
             "description": "French (fr) Translation for StepMania 5.3 \"Outfox\"",
-            "contributors": ["Ksempac", "Kaede573"],
+            "contributors": [
+                "Ksempac", 
+                "Kaede573"
+            ],
             "topics": ["translation"]
         },
         {
@@ -68,20 +92,30 @@
         {
             "name": "OutFox-DE",
             "description": "German (de) Translation for StepMania 5.3 \"Outfox\"",
-            "contributors": ["DanielRotwind", "moruzerinho6"],
+            "contributors": [
+                "DanielRotwind", 
+                "moruzerinho6"
+            ],
             "topics": ["translation"]
         },
         {
             "name": "OutFox-es",
             "description": "Español (es) Translation for StepMania 5.3 \"Outfox\"",
-            "contributors": ["JoseVarelaP", "moruzerinho6"],
+            "contributors": [
+                "JoseVarelaP", 
+                "moruzerinho6"
+            ],
             "topics": ["translation"]
         },
         {
             "name": "OutfoxPTBR",
             "description":
                 "Brazilian Portuguese (PT-BR) Translation for StepMania 5.3 \"Outfox\"",
-            "contributors": ["moruzerinho6", "SheepyChris", "SHRMP0"],
+            "contributors": [
+                "moruzerinho6", 
+                "SheepyChris", 
+                "SHRMP0"
+            ],
             "topics": ["translation"]
         },
         {
@@ -99,7 +133,10 @@
         {
             "name": "OutFox-hu",
             "description": "Hungarian (hu)  Translation for StepMania 5.3 \"Outfox\"",
-            "contributors": ["KaZo75", "moruzerinho6"],
+            "contributors": [
+                "KaZo75", 
+                "moruzerinho6"
+            ],
             "topics": ["translation"]
         },
         {
@@ -119,12 +156,19 @@
             "name": "Tiny-Webini",
             "description": "Translate Project Moondance like StepMania",
             "contributors": ["moruzerinho6"],
-            "topics": ["translation", "tool"]
+            "topics": [
+                "translation", 
+                "tool"
+            ]
         },
         {
             "name": "MoondanceWeb-PT",
             "description": "Portuguese translation of Project Moondance website.",
-            "contributors": ["moruzerinho6", "SheepyChris", "SHRMP0"],
+            "contributors": [
+                "moruzerinho6", 
+                "SheepyChris", 
+                "SHRMP0"
+            ],
             "topics": ["translation"]
         },
         {
@@ -136,13 +180,19 @@
         {
             "name": "Aqui-Alpha-Noteskins",
             "description": "Global Noteskins for StepMania 5.3",
-            "contributors": ["akym-tsubby", "moruzerinho6"],
+            "contributors": [
+                "akym-tsubby", 
+                "moruzerinho6"
+            ],
             "topics": ["noteskin"]
         },
         {
             "name": "R.O.B.-Bot-Custom",
             "description": "No description.",
-            "contributors": ["MechMaelstrom", "moruzerinho6"],
+            "contributors": [
+                "MechMaelstrom", 
+                "moruzerinho6"
+            ],
             "topics": ["noteskin"]
         },
         {
@@ -156,7 +206,11 @@
             "name": "ArGame-Customizations",
             "description": "Customizations created by AppleArcade120 are stored here.",
             "contributors": ["AppleArcade120"],
-            "topics": ["theme", "noteskin", "judgment"]
+            "topics": [
+                "theme", 
+                "noteskin", 
+                "judgment"
+            ]
         },
         {
             "name": "TF_Wheels",
