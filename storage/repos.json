@@ -17,7 +17,7 @@
         {
             "name": "Simply-Love-OutFox",
             "description":
-                "a fork of Simply Love focused on additional tweaks for compatibility and integrations with StepMania OutFox 5.3",
+                "a fork of Simply Love focused on additional tweaks for compatibility and integrations with Project OutFox",
             "contributors": ["JoseVarelaP"],
             "topics": ["theme"]
         },
@@ -66,7 +66,7 @@
         {
             "name": "smtheme-soundwaves-community",
             "description":
-                "Community version of Soundwaves, the StepMania 5.3 default theme.",
+                "Community version of Soundwaves, the Project OutFox default theme.",
             "contributors": [
                 "ListenerJubatus", 
                 "moruzerinho6", 
@@ -76,7 +76,7 @@
         },
         {
             "name": "Outfox-fr",
-            "description": "French (fr) Translation for StepMania 5.3 \"Outfox\"",
+            "description": "French (fr) Translation for Project OutFox",
             "contributors": [
                 "Ksempac", 
                 "Kaede573"
@@ -85,13 +85,13 @@
         },
         {
             "name": "OutFox-he",
-            "description": "Hebrew (he) Translation for StepMania 5.3 \"Outfox\"",
+            "description": "Hebrew (he) Translation for Project OutFox",
             "contributors": ["snil4"],
             "topics": ["translation"]
         },
         {
             "name": "OutFox-DE",
-            "description": "German (de) Translation for StepMania 5.3 \"Outfox\"",
+            "description": "German (de) Translation for Project OutFox",
             "contributors": [
                 "DanielRotwind", 
                 "moruzerinho6"
@@ -100,7 +100,7 @@
         },
         {
             "name": "OutFox-es",
-            "description": "Español (es) Translation for StepMania 5.3 \"Outfox\"",
+            "description": "Español (es) Translation for Project OutFox",
             "contributors": [
                 "JoseVarelaP", 
                 "moruzerinho6"
@@ -110,7 +110,7 @@
         {
             "name": "OutfoxPTBR",
             "description":
-                "Brazilian Portuguese (PT-BR) Translation for StepMania 5.3 \"Outfox\"",
+                "Brazilian Portuguese (PT-BR) Translation for Project OutFox",
             "contributors": [
                 "moruzerinho6", 
                 "SheepyChris", 
@@ -120,19 +120,19 @@
         },
         {
             "name": "OutFox-ja",
-            "description": "Japanese (ja) Translation for StepMania 5.3 \"Outfox\"",
+            "description": "Japanese (ja) Translation for Project OutFox",
             "contributors": ["hanubeki"],
             "topics": ["translation"]
         },
         {
             "name": "OutFox-PL",
-            "description": "Polish (pl) Translation for StepMania 5.3 \"Outfox\"",
+            "description": "Polish (pl) Translation for Project Outfox",
             "contributors": ["JustMoneko"],
             "topics": ["translation"]
         },
         {
             "name": "OutFox-hu",
-            "description": "Hungarian (hu)  Translation for StepMania 5.3 \"Outfox\"",
+            "description": "Hungarian (hu) Translation for Project OutFox",
             "contributors": [
                 "KaZo75", 
                 "moruzerinho6"
@@ -141,7 +141,7 @@
         },
         {
             "name": "OutFox-IT",
-            "description": "Italian (IT)  Translation for StepMania 5.3 \"Outfox\"",
+            "description": "Italian (IT) Translation for Project OutFox",
             "contributors": ["Gabrimax98"],
             "topics": ["translation"]
         },
@@ -179,7 +179,7 @@
         },
         {
             "name": "Aqui-Alpha-Noteskins",
-            "description": "Global Noteskins for StepMania 5.3",
+            "description": "Global Noteskins for Project OutFox",
             "contributors": [
                 "akym-tsubby", 
                 "moruzerinho6"
@@ -198,7 +198,7 @@
         {
             "name": "Lambda-PTBR",
             "description":
-                "Brazilian Portuguese (PT-BR) Translation for StepMania 5.3 \"Lambda\"",
+                "Brazilian Portuguese (PT-BR) Translation for Project OutFox",
             "contributors": ["moruzerinho6"],
             "topics": ["translation"]
         },
@@ -226,7 +226,7 @@
         },
         {
             "name": "Lambda-PL",
-            "description": "Polish (PL) Translation for StepMania 5.3 \"Lambda\" theme",
+            "description": "Polish (PL) Translation for themes \"Lambda\" and \"Lambda Rebuild\"",
             "contributors": ["JustMoneko"],
             "topics": ["translation"]
         },
@@ -245,7 +245,7 @@
         {
             "name": "CircoCero-PTBR",
             "description":
-                "Brazilian Portuguese (PT-BR) Translation for StepMania 5.3 \"CircoCero\"",
+                "Brazilian Portuguese (PT-BR) Translation for Project OutFox",
             "contributors": ["moruzerinho6"],
             "topics": ["translation"]
         },
