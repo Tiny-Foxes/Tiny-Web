@@ -266,6 +266,12 @@
             "description": "Scripts for porting modfiles from NotITG to OutFox",
             "contributors": ["Sudospective"],
             "topics": ["tool"]
+        },
+        {
+            "name": "kitsu-template",
+            "description": "Kitsu Template for Project OutFox",
+            "contributors": ["Sudospective"],
+            "topics": ["tool"]
         }
     ]
 }
