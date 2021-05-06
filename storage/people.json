@@ -5,15 +5,16 @@
         "SHRMP0", "SheepyChris", "AppleArcade120", "TeamRizu", "akym-tsubby",
         "DanielRotwind", "JapanYoshi", "Kaede573", "KannushiLink", "Ksempac", 
         "MattMayuga", "MechMaelstrom", "Rosho128", "snil4", "vithov1120", 
-        "XeroOl", "jose1771", "Sudospective", "PCBoyGames", "jerrymyx"
+        "XeroOl", "jose1711", "Sudospective", "PCBoyGames", "jerrymxy"
     ],
     "membersWithDescription": {
-        "moruzerinho6": "No more than one, not less than one.",
+        "moruzerinho6": "Community Manager and translator of <a target=\"_blank\" href=\"https://twitter.com/TeamRizu\">@TeamRizu</a>, <a target=\"_blank\" href=\"https://twitter.com/tiny_foxes\">@Tiny-Foxes</a> owner. EN/PT. Brazil - RJ.",
         "JoseVarelaP": "A programmer that normally does themes for NotITG, OpenITG and SM5. Currently a developer for Project MoonDance.",
         "TeamRizu": "The creators of StepMania OutFox",
         "Rosho128": "Hi, My name is Bakhtiar \"Rosho\" Yasmeen, and I want to help you.",
         "Scraticus": "Old Bastard, DJ, and musically minded programmer and teacher.",
-        "Sudospective": "Hi, I'm Avery. You can call me Sudo. I nag my computers to do things for me."
+        "Sudospective": "Hi, I'm Avery. You can call me Sudo. I nag my computers to do things for me.",
+        "SHRMP0": "EN/PT | Community manager and translator for <a target=\"_blank\" href=\"https://twitter.com/TeamRizu\">@TeamRizu</a> + <a target=\"_blank\" href=\"https://twitter.com/tiny_foxes\">@Tiny-Foxes</a>"
     },
     "specialStatus": {
         "JoseVarelaP": {
@@ -93,7 +94,7 @@
         "vithov1120": {
             "translator": true
         },
-        "jose1771": {
+        "jose1711": {
             "translator": true
         },
         "akym-tsubby": {
@@ -122,7 +123,7 @@
         "Sudospective": {
             "toolMaker": true
         },
-        "jerrymyx": {
+        "jerrymxy": {
             "translator": true
         }
     }

@@ -11,7 +11,7 @@
                 "snil4",
                 "Ksempac",
                 "ListenerJubatus",
-                "jerrymyx"
+                "jerrymxy"
             ],
             "topics": ["translation"]
         },
@@ -272,6 +272,12 @@
             "description": "Kitsu Template for Project OutFox",
             "contributors": ["Sudospective"],
             "topics": ["tool"]
+        },
+        {
+            "name": "OutFox-zh-CN",
+            "description": "Simplified Chinese (zh-CN) Translation for Project OutFox",
+            "contributors": ["jerrymxy"],
+            "topics": ["translation"]
         }
     ]
 }
