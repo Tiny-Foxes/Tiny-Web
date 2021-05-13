@@ -69,10 +69,6 @@
             "projectMoondance": true,
             "translator": true
         },
-        "snil4": {
-            "translator": true,
-            "toolMaker": true
-        },
         "SHRMP0": {
             "projectMoondance": true,
             "translator": true
@@ -80,6 +76,14 @@
         "SheepyChris": {
             "projectMoondance": true,
             "translator": true
+        },
+        "Sudospective": {
+            "projectMoondance": true,
+            "toolMaker": true
+        },
+        "snil4": {
+            "translator": true,
+            "toolMaker": true
         },
         "DanielRotwind": {
             "translator": true
@@ -118,9 +122,6 @@
             "noteskinMaker": true
         },
         "XeroOl": {
-            "toolMaker": true
-        },
-        "Sudospective": {
             "toolMaker": true
         },
         "jerrymxy": {
