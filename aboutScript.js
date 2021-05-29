@@ -152,7 +152,7 @@ export const main = async () => {
   const tool = document.getElementById('toolFilter')
 
   const filteredMembers = () => {
-    let memberList = members
+    let memberList = Members.members
 
     const possibleFilters = [
       'rizu',
