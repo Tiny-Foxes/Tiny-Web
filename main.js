@@ -1,5 +1,7 @@
 import * as projectsScript from './projectsScript.js'
 import * as aboutScript from './aboutScript.js'
+import * as member from './classes/member.js'
+window.tinyMember = member
 $('[data-toggle="tooltip"]').tooltip()
 const lastPage = new Set()
 lastPage.add('home')
