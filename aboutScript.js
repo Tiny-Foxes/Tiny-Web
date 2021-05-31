@@ -176,7 +176,7 @@ export const main = async () => {
     for (let i = 0; i < possibleFilters.length; i++) {
       if (filters.has(possibleFilters[i])) {
         memberList = memberList.filter(
-          (m) => specialStatus[m] && specialStatus[m][checkObjects[i]]
+          (m) => Members.specialStatus[m] && Members.specialStatus[m][checkObjects[i]]
         )
       }
     }
