@@ -8,6 +8,7 @@ export class MemberPublisher {
   }
 
   async init() {
+    // hacky but gets the job done.
     const jsonPath = window.location.hostname === 'tiny-foxes.github.io' ? '../Tiny-Web/storage/people.json' : '../storage/people.json'
     const data = await $.getJSON(jsonPath)
     this.people = data
