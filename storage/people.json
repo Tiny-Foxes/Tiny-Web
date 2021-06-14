@@ -5,7 +5,7 @@
         "SHRMP0", "SheepyChris", "AppleArcade120", "TeamRizu", "akym-tsubby",
         "DanielRotwind", "JapanYoshi", "Kaede573", "KannushiLink", "Ksempac", 
         "MattMayuga", "MechMaelstrom", "Rosho128", "snil4", "vithov1120", 
-        "XeroOl", "jose1711", "Sudospective", "PCBoyGames", "jerrymxy"
+        "XeroOl", "jose1711", "Sudospective", "PCBoyGames", "jerrymxy", "Nepumi-Jr"
     ],
     "membersWithDescription": {
         "moruzerinho6": "Community Manager and translator of <a target=\"_blank\" href=\"https://twitter.com/TeamRizu\">@TeamRizu</a>, <a target=\"_blank\" href=\"https://twitter.com/tiny_foxes\">@Tiny-Foxes</a> owner. EN/PT. Brazil - RJ.",
@@ -14,7 +14,8 @@
         "Rosho128": "Hi, My name is Bakhtiar \"Rosho\" Yasmeen, and I want to help you.",
         "Scraticus": "Old Bastard, DJ, and musically minded programmer and teacher.",
         "Sudospective": "Hi, I'm Avery. You can call me Sudo. I nag my computers to do things for me.",
-        "SHRMP0": "EN/PT | Community manager and translator for <a target=\"_blank\" href=\"https://twitter.com/TeamRizu\">@TeamRizu</a> + <a target=\"_blank\" href=\"https://twitter.com/tiny_foxes\">@Tiny-Foxes</a>"
+        "SHRMP0": "EN/PT | Community manager and translator for <a target=\"_blank\" href=\"https://twitter.com/TeamRizu\">@TeamRizu</a> + <a target=\"_blank\" href=\"https://twitter.com/tiny_foxes\">@Tiny-Foxes</a>",
+        "Nepumi-Jr": "Just mini form of <a target=\"_blank\" href=\"https://github.com/Nepumi\">@Nepumi</a>"
     },
     "specialStatus": {
         "JoseVarelaP": {
@@ -79,6 +80,10 @@
         },
         "Sudospective": {
             "projectMoondance": true,
+            "toolMaker": true
+        },
+        "Nepumi-Jr": {
+            "judgmentMaker": true,
             "toolMaker": true
         },
         "snil4": {
