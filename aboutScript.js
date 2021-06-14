@@ -12,10 +12,8 @@ export const main = async () => {
   /**
    *
    * @param {string[]} members
-   * @param {Object.<string, Object.<string, boolean>>} specialStatus
-   * @param {Object.<string, string>} membersWithDescription
    */
-  const generateProfiles = (members, specialStatus, membersWithDescription) => {
+  const generateProfiles = (members) => {
     let membersElem = document.getElementById('bye')
     membersElem.innerHTML = ''
 
@@ -35,7 +33,7 @@ export const main = async () => {
         current.setAttribute('style', 'height: 320px')
       }
 
-      const statuses = specialStatus[members[i]]
+      const statuses = Members.memberStatus(members[i])
       if (statuses) {
         const items = document.createElement('div')
         items.setAttribute('style', 'position: absolute')
@@ -124,10 +122,10 @@ export const main = async () => {
       profileAnchor.appendChild(name)
 
       current.appendChild(profileAnchor)
-      if (membersWithDescription[members[i]]) {
+      if (Members.memberDescription(members[i])) {
         const description = document.createElement('p')
         description.style.fontSize = 'small'
-        description.innerHTML = membersWithDescription[members[i]]
+        description.innerHTML = Members.memberDescription(members[i])
         current.appendChild(description)
       }
       membersElem.appendChild(current)
@@ -140,7 +138,7 @@ export const main = async () => {
   const Members = new member.MemberPublisher()
   await Members.init()
 
-  generateProfiles(Members.members, Members.specialStatus, Members.membersWithDescription)
+  generateProfiles(Members.members)
 
   const filters = new Set()
   const rizuFilter = document.getElementById('rizuFilter')
@@ -176,7 +174,7 @@ export const main = async () => {
     for (let i = 0; i < possibleFilters.length; i++) {
       if (filters.has(possibleFilters[i])) {
         memberList = memberList.filter(
-          (m) => Members.specialStatus[m] && Members.specialStatus[m][checkObjects[i]]
+          (m) => Members.memberStatus(m) && Members.specialStatus[m][checkObjects[i]]
         )
       }
     }
@@ -202,7 +200,7 @@ export const main = async () => {
       filterObj.classList.add('btn-primary')
     }
 
-    generateProfiles(filteredMembers(), Members.specialStatus, Members.membersWithDescription)
+    generateProfiles(filteredMembers())
   }
 
   rizuFilter.onclick = () => {

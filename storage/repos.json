@@ -278,6 +278,12 @@
             "description": "Simplified Chinese (zh-CN) Translation for Project OutFox",
             "contributors": ["jerrymxy"],
             "topics": ["translation"]
+        },
+        {
+            "name": "BeatMode-Tutorial",
+            "description": "a small introduction/refresher course for people who are new to the beat gamemode.",
+            "contributors": ["DanielRotwind"],
+            "topics": ["tool"]
         }
     ]
 }
