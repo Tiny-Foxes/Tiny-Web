@@ -62,8 +62,8 @@
             "topics": ["tool"]
         },
         {
-            "name": "MoondanceWeb",
-            "description": "Language files for the Project Moondance website",
+            "name": "OutFoxWeb",
+            "description": "Language files for the website",
             "contributors": ["moruzerinho6"],
             "topics": ["translation"]
         },
@@ -160,7 +160,7 @@
         },
         {
             "name": "Tiny-Webini",
-            "description": "Translate Project Moondance like StepMania",
+            "description": "Translate OutFox website like OutFox",
             "contributors": ["moruzerinho6"],
             "topics": [
                 "translation", 
@@ -168,8 +168,8 @@
             ]
         },
         {
-            "name": "MoondanceWeb-PT",
-            "description": "Portuguese translation of Project Moondance website.",
+            "name": "OutFoxWeb-PT",
+            "description": "Portuguese translation of OutFox website.",
             "contributors": [
                 "moruzerinho6", 
                 "SheepyChris", 
@@ -237,7 +237,7 @@
             "topics": ["translation"]
         },
         {
-            "name": "MoondanceWeb-PL",
+            "name": "OutFoxWeb-PL",
             "description": "No description.",
             "contributors": ["JustMoneko"],
             "topics": ["translation"]

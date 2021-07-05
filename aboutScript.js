@@ -41,23 +41,29 @@ export const main = async () => {
           let special = document.createElement('img')
 
           switch (Object.keys(statuses)[s]) {
-            case 'teamRizu':
-              special.src = 'members/TeamRizu.png'
-              if (members[i] === 'Scraticus') {
-                special.setAttribute('data-translation', 'teamRizuLeadTooltip')
-                special.title = 'Team Rizu Lead'
-              } else {
-                special.setAttribute('data-translation', 'teamRizuTooltip')
-                special.title = 'Team Rizu Member'
-              }
+            case 'devTeam':
+              special = document.createElement('i')
+              special.classList.add('fab', 'fa-dev', 'fa-xs')
+              special.setAttribute('data-translation', 'devTeamTooltip')
+              special.title = 'OutFox Dev Team'
               break
-            case 'projectMoondance':
-              special.src = 'projectMoondance.png'
+            case 'communityTeam':
+              special = document.createElement('i')
+              special.classList.add('fas', 'fa-comments', 'fa-xs')
               special.setAttribute(
                 'data-translation',
-                'projectMoondanceTooltip'
+                'communityTeamTooltip'
               )
-              special.title = 'Project Moondance Staff'
+              special.title = 'OutFox Community Team'
+              break
+            case 'designTeam':
+              special = document.createElement('i')
+              special.classList.add('fas', 'fa-ruler-combined', 'fa-xs')
+              special.setAttribute(
+                'data-translation',
+                'designTeamTooltip'
+              )
+              special.title = 'OutFox Design Team'
               break
             case 'tinyFoxesFounder':
               special.src = 'tinyFoxes.png'
@@ -141,8 +147,9 @@ export const main = async () => {
   generateProfiles(Members.members)
 
   const filters = new Set()
-  const rizuFilter = document.getElementById('rizuFilter')
-  const moondanceFilter = document.getElementById('moondanceFilter')
+  const rizuFilter = document.getElementById('devFilter')
+  const moondanceFilter = document.getElementById('communityFilter')
+  const designFilter = document.getElementById('designFilter')
   const founder = document.getElementById('founderFilter')
   const translator = document.getElementById('translatorFilter')
   const noteskin = document.getElementById('noteskinFilter')
@@ -153,22 +160,24 @@ export const main = async () => {
     let memberList = Members.members
 
     const possibleFilters = [
-      'rizu',
-      'moondance',
+      'dev',
+      'community',
       'founder',
       'translator',
       'noteskin',
       'judgment',
       'tool',
+      'design'
     ]
     const checkObjects = [
-      'teamRizu',
-      'projectMoondance',
+      'devTeam',
+      'communityTeam',
       'tinyFoxesFounder',
       'translator',
       'noteskinMaker',
       'judgmentMaker',
       'toolMaker',
+      'designTeam'
     ]
 
     for (let i = 0; i < possibleFilters.length; i++) {
@@ -204,11 +213,15 @@ export const main = async () => {
   }
 
   rizuFilter.onclick = () => {
-    filterIn(rizuFilter, 'rizu')
+    filterIn(rizuFilter, 'dev')
+  }
+
+  designFilter.onclick = () => {
+    filterIn(designFilter, 'design')
   }
 
   moondanceFilter.onclick = () => {
-    filterIn(moondanceFilter, 'moondance')
+    filterIn(moondanceFilter, 'community')
   }
 
   founder.onclick = () => {

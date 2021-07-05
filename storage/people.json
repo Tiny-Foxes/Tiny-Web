@@ -9,7 +9,7 @@
     ],
     "membersWithDescription": {
         "moruzerinho6": "Community Manager and translator of <a target=\"_blank\" href=\"https://twitter.com/TeamRizu\">@TeamRizu</a>, <a target=\"_blank\" href=\"https://twitter.com/tiny_foxes\">@Tiny-Foxes</a> owner. EN/PT. Brazil - RJ.",
-        "JoseVarelaP": "A programmer that normally does themes for NotITG, OpenITG and SM5. Currently a developer for Project MoonDance.",
+        "JoseVarelaP": "A programmer that normally does themes for NotITG, OpenITG and SM5. Currently a developer for Project OutFox.",
         "TeamRizu": "The creators of Project OutFox",
         "Rosho128": "Hi, My name is Bakhtiar \"Rosho\" Yasmeen, and I want to help you.",
         "Scraticus": "Old Bastard, DJ, and musically minded programmer and teacher.",
@@ -19,67 +19,63 @@
     },
     "specialStatus": {
         "JoseVarelaP": {
-            "teamRizu": true,
-            "projectMoondance": true,
-            "translator": true
+            "devTeam": true,
+            "translator": true,
+            "designTeam": true
         },
         "ListenerJubatus": {
-            "teamRizu": true,
-            "projectMoondance": true,
+            "communityTeam": true,
+            "designTeam": true,
             "noteskinMaker": true,
             "judgmentMaker": true
         },
         "MrThatKid": {
-            "teamRizu": true,
-            "projectMoondance": true
+            "devTeam": true
         },
         "Scraticus": {
-            "teamRizu": true,
-            "projectMoondance": true,
+            "devTeam": true,
             "tinyFoxesFounder": true,
             "toolMaker": true
         },
         "concubidated": {
-            "teamRizu": true,
-            "projectMoondance": true
+            "devTeam": true
         },
         "Jousway": {
-            "teamRizu": true,
-            "projectMoondance": true,
+            "devTeam": true,
             "noteskinMaker": true
         },
         "moruzerinho6": {
-            "teamRizu": true,
-            "projectMoondance": true,
+            "communityTeam": true,
             "tinyFoxesFounder": true,
             "translator": true,
             "toolMaker": true
         },
         "JustMoneko": {
-            "projectMoondance": true,
+            "communityTeam": true,
             "translator": true
         },
         "Gabrimax98": {
-            "projectMoondance": true,
+            "communityTeam": true,
             "translator": true
         },
         "ArcticFqx": {
-            "projectMoondance": true
+            "devTeam": true
         },
         "hanubeki": {
-            "projectMoondance": true,
+            "communityTeam": true,
             "translator": true
         },
         "SHRMP0": {
-            "projectMoondance": true,
+            "communityTeam": true,
             "translator": true
         },
         "SheepyChris": {
-            "projectMoondance": true,
+            "designTeam": true,
+            "communityTeam": true,
             "translator": true
         },
         "Sudospective": {
-            "projectMoondance": true,
+            "communityTeam": true,
             "toolMaker": true
         },
         "Nepumi-Jr": {
