@@ -284,6 +284,12 @@
             "description": "a small introduction/refresher course for people who are new to the beat gamemode.",
             "contributors": ["DanielRotwind"],
             "topics": ["tool"]
+        },
+        {
+            "name": "konko-module-system",
+            "description": "Konko module system for OutFox themes",
+            "contributors": ["Sudospective"],
+            "topics": ["tool"]
         }
     ]
 }
