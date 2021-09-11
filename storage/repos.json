@@ -45,7 +45,7 @@
             "contributors": [
                 "moruzerinho6", 
                 "Rosho128", 
-                "AppleArcade120",
+                "RyutoSetsujin",
                 "JustMoneko",
                 "snil4",
                 "PCBoyGames"
@@ -209,9 +209,9 @@
             "topics": ["translation"]
         },
         {
-            "name": "ArGame-Customizations",
-            "description": "Customizations created by AppleArcade120 are stored here.",
-            "contributors": ["AppleArcade120"],
+            "name": "RyutoSetsujin-Customizations",
+            "description": "Customizations created by RyutoSetsujin are stored here.",
+            "contributors": ["RyutoSetsujin"],
             "topics": [
                 "theme", 
                 "noteskin", 
