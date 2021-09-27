@@ -4,7 +4,7 @@
         "MrThatKid", "moruzerinho6", "ArcticFqx", "hanubeki", "Gabrimax98", "JustMoneko",
         "SHRMP0", "SheepyChris", "RyutoSetsujin", "TeamRizu", "akym-tsubby",
         "DanielRotwind", "JapanYoshi", "Kaede573", "KannushiLink", "Ksempac", 
-        "MattMayuga", "MechMaelstrom", "Rosho128", "snil4", "vithov1120", 
+        "MattMayuga", "MechMaelstrom", "Rosho128", "snil4", "vithov1120", "48productions",
         "XeroOl", "jose1711", "Sudospective", "PCBoyGames", "jerrymxy", "Nepumi-Jr"
     ],
     "membersWithDescription": {
@@ -15,7 +15,8 @@
         "Scraticus": "Old Bastard, DJ, and musically minded programmer and teacher.",
         "Sudospective": "Hi, I'm Avery. You can call me Sudo. I nag my computers to do things for me.",
         "SHRMP0": "EN/PT | Community manager and translator for <a target=\"_blank\" href=\"https://twitter.com/TeamRizu\">@TeamRizu</a> + <a target=\"_blank\" href=\"https://twitter.com/tiny_foxes\">@Tiny-Foxes</a>",
-        "Nepumi-Jr": "Just mini form of <a target=\"_blank\" href=\"https://github.com/Nepumi\">@Nepumi</a>"
+        "Nepumi-Jr": "Just mini form of <a target=\"_blank\" href=\"https://github.com/Nepumi\">@Nepumi</a>",
+        "48productions": "Some weirdo on the internet with a crippling addiction to programming and dance games."
     },
     "specialStatus": {
         "JoseVarelaP": {
@@ -127,6 +128,9 @@
         },
         "jerrymxy": {
             "translator": true
+        },
+        "48productions": {
+            "toolMaker": true
         }
     }
 }

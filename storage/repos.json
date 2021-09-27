@@ -290,6 +290,12 @@
             "description": "Konko module system for OutFox themes",
             "contributors": ["Sudospective"],
             "topics": ["tool"]
+        },
+        {
+            "name": "SM5-Arduino-Lighting",
+            "description": "Arduino code for game-controlled pad/cab lights in StepMania 5",
+            "contributors": ["48productions"],
+            "topics": ["tool"]
         }
     ]
 }
