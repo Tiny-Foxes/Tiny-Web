@@ -13,7 +13,7 @@
         "TeamRizu": "The creators of Project OutFox",
         "Rosho128": "Hi, My name is Bakhtiar \"Rosho\" Yasmeen, and I want to help you.",
         "Scraticus": "Old Bastard, DJ, and musically minded programmer and teacher.",
-        "Sudospective": "Hi, I'm Avery. You can call me Sudo. I nag my computers to do things for me.",
+        "Sudospective": "Hi, I'm Sudospective. You can call me Sudo. I nag my computers to do things for me.",
         "SHRMP0": "EN/PT | Community manager and translator for <a target=\"_blank\" href=\"https://twitter.com/TeamRizu\">@TeamRizu</a> + <a target=\"_blank\" href=\"https://twitter.com/tiny_foxes\">@Tiny-Foxes</a>",
         "Nepumi-Jr": "Just mini form of <a target=\"_blank\" href=\"https://github.com/Nepumi\">@Nepumi</a>",
         "48productions": "Some weirdo on the internet with a crippling addiction to programming and dance games."
@@ -76,6 +76,7 @@
             "translator": true
         },
         "Sudospective": {
+            "designTeam": true,
             "communityTeam": true,
             "toolMaker": true
         },
