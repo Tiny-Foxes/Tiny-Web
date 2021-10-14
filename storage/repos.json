@@ -296,6 +296,18 @@
             "description": "Arduino code for game-controlled pad/cab lights in StepMania 5",
             "contributors": ["48productions"],
             "topics": ["tool"]
+        },
+        {
+            "name": "ComboNumbers-by-MattMayuga",
+            "description": "Combo fonts for StepMania and Simply Love (SM 5.x version)",
+            "contributors": ["MattMayuga"],
+            "topics": ["judgment"]
+        },
+        {
+            "name": "superuser-outfox",
+            "description": "Superuser Theme for Project OutFox",
+            "contributors": ["Sudospective"],
+            "topics": ["theme"]
         }
     ]
 }
