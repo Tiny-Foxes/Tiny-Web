@@ -5,7 +5,8 @@
         "SHRMP0", "SheepyChris", "RyutoSetsujin", "TeamRizu", "akym-tsubby",
         "DanielRotwind", "JapanYoshi", "Kaede573", "KannushiLink", "Ksempac", 
         "MattMayuga", "MechMaelstrom", "Rosho128", "snil4", "vithov1120", "48productions",
-        "XeroOl", "jose1711", "Sudospective", "PCBoyGames", "jerrymxy", "Nepumi-Jr"
+        "XeroOl", "jose1711", "Sudospective", "PCBoyGames", "jerrymxy", "Nepumi-Jr",
+        "DysKoneko"
     ],
     "membersWithDescription": {
         "moruzerinho6": "Community Manager and translator of <a target=\"_blank\" href=\"https://twitter.com/TeamRizu\">@TeamRizu</a>, <a target=\"_blank\" href=\"https://twitter.com/tiny_foxes\">@Tiny-Foxes</a> owner. EN/PT. Brazil - RJ.",
@@ -132,6 +133,9 @@
         },
         "48productions": {
             "toolMaker": true
+        },
+        "DysKoneko": {
+            "translator": true
         }
     }
 }
