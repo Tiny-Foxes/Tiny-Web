@@ -256,12 +256,6 @@
             "topics": ["translation"]
         },
         {
-            "name": "Judge",
-            "description": "Multilingual judgments by Haley",
-            "contributors": ["JapanYoshi"],
-            "topics": ["judgment"]
-        },
-        {
             "name": "porting-scripts",
             "description": "Scripts for porting modfiles from NotITG to OutFox",
             "contributors": ["Sudospective"],
